@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="reduced">
     <div class="nav-wrapper">
       <div class="socials-menu">
         <SocialIcon
@@ -36,13 +36,17 @@ export default {
   components: {
     SocialIcon,
   },
+
 };
 </script>
 
 <style>
 :root {
   --accent-color: #439efe;
+  --accent-color-70: #439dfeb4;
   --darker-accent-color: #3884d4;
+  --font-size-20: 20px;
+  --font-size-80: 80px;
 }
 
 html {
@@ -50,6 +54,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: #141618;
 }
 
 body {
@@ -70,11 +75,22 @@ h6 {
   color: #fff;
 }
 
+.style-light{
+  color: #000;
+}
+
+.style-dark{
+  color: #fff;
+}
+
 .btn {
   background-color: var(--accent-color);
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 10em;
   transition: background-color ease-in-out 0.2s;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -82,8 +98,21 @@ h6 {
 }
 
 #nav {
-  background-color: #000;
   padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+  transition: ease-in-out .3s;
+}
+
+#nav.reduced{
+  background-color: #131313;
+}
+
+#nav.reduced .menu-logo img{
+  width: 50px;
 }
 
 .nav-wrapper {
@@ -96,9 +125,8 @@ h6 {
 
 #nav a {
   color: #fff;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 400;
   transition-duration: 0.2s;
 }
 

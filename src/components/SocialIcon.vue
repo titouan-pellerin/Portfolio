@@ -22,9 +22,11 @@ export default {
     margin-right: 20px;
   }
 
-  .social-link{
-    color: var(--acent-color);
+  .social-link:hover{
+    color: var(--accent-color);
   }
+
+
 
 
 </style>
