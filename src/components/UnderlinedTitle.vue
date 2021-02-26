@@ -21,6 +21,7 @@ export default {
     position: relative;
     display: inline;
     box-shadow: inset 0 -0.5em var(--accent-color-70);
+    line-height: 1em;
 }
 
 

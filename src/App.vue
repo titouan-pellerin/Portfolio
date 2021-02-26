@@ -1,5 +1,5 @@
 <template>
-  <div id="nav" class="reduced">
+  <div id="nav">
     <div class="nav-wrapper">
       <div class="socials-menu">
         <SocialIcon
@@ -36,7 +36,19 @@ export default {
   components: {
     SocialIcon,
   },
-
+  methods: {
+    scrollFunction() {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      )
+        document.getElementById("nav").classList.add("reduced");
+      else document.getElementById("nav").classList.remove("reduced");
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.scrollFunction)
+  }
 };
 </script>
 
@@ -75,22 +87,24 @@ h6 {
   color: #fff;
 }
 
-.style-light{
+.style-light {
   color: #000;
 }
 
-.style-dark{
+.style-dark {
   color: #fff;
 }
 
 .btn {
   background-color: var(--accent-color);
-  padding: 10px 30px;
+  padding: 12px 30px;
   border-radius: 10em;
   transition: background-color ease-in-out 0.2s;
   color: white;
   text-decoration: none;
   display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -104,16 +118,16 @@ h6 {
   width: 100%;
   box-sizing: border-box;
   z-index: 100;
-  transition: ease-in-out .3s;
+  background-color: transparent;
+  transition: background-color ease-in-out .4s;
+
 }
 
-#nav.reduced{
+#nav.reduced {
   background-color: #131313;
 }
 
-#nav.reduced .menu-logo img{
-  width: 50px;
-}
+
 
 .nav-wrapper {
   text-transform: uppercase;
@@ -121,6 +135,7 @@ h6 {
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: ease-in-out .4s;
 }
 
 #nav a {
@@ -144,8 +159,11 @@ h6 {
 
 .menu-logo img {
   width: 100px;
+  transition: width ease-in-out .4s;
 }
-
+#nav.reduced .menu-logo img {
+  width: 50px;
+}
 .socials-menu,
 .visufo-cta {
   position: absolute;
@@ -157,5 +175,18 @@ h6 {
 
 .visufo-cta {
   right: 0;
+}
+
+.category{
+  padding: 5px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.473);
+}
+
+.category:not(:last-child){
+  margin-right: 5px;
 }
 </style>

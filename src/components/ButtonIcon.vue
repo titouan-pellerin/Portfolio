@@ -19,7 +19,13 @@ export default {
 
 <style>
 
+  .btn-icon{
+    display: flex;
+    align-items: center;
+  }
+
   .btn-icon i{
-    margin-left: 5px;
+    margin-left: 10px;
+    font-size: 0.8em;
   }
 </style>
