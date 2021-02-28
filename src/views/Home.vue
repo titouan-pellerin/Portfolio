@@ -47,7 +47,7 @@
       <div class="works-container">
         <div class="works">
           <WorkCard
-            v-for="work in works"
+            v-for="work in works.slice(0,6)"
             :key="work.title"
             :title="work.title"
             :categories="work.categories"
@@ -107,11 +107,11 @@
         </div>
       </div>
       <ButtonIcon
-          content="Mon CV"
-          icon="fa-external-link-alt"
-          url=""
-          class="skills-button"
-        ></ButtonIcon>
+        content="Mon CV"
+        icon="fa-external-link-alt"
+        url=""
+        class="skills-button"
+      ></ButtonIcon>
     </section>
   </div>
 </template>
@@ -136,12 +136,11 @@ export default {
   data: function () {
     return {
       categories: [{ title: "Développement" }, { title: "Test" }],
-      works: "",
+      works: ''
     };
   },
   methods: {
     fetchWork() {
-      let self = this;
       fetch("/works/works.json")
         .then((response) => response.json())
         .then((data) => {
@@ -150,7 +149,8 @@ export default {
             let dateB = new Date(b.date);
             return dateB - dateA;
           });
-          self.works = data;
+          this.works = data;
+          localStorage.works = JSON.stringify(data);
         });
     },
   },
@@ -204,7 +204,7 @@ export default {
   max-width: 1000px;
 }
 
-.header-socials{
+.header-socials {
   font-size: var(--font-size-20);
 }
 
@@ -212,33 +212,6 @@ export default {
   margin-bottom: 20px;
 }
 
-.scroll-down{
-  font-size: 30px;
-  position: absolute;
-  bottom: 10px;
-}
-
-.scroll-down i {
-  animation: bounce 2s infinite;
-  color: var(--accent-color);
-
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-}
 
 .works-container {
   background: linear-gradient(#141618 80%, transparent 20%);
@@ -276,7 +249,8 @@ export default {
   align-self: flex-start;
 }
 
-.works-btn, .skills-button {
+.works-btn,
+.skills-button {
   display: inline-block;
   text-align: center;
 }
@@ -297,8 +271,9 @@ export default {
   align-items: center;
 }
 
-.skills-portrait{
+.skills-portrait {
   margin: 50px;
   border-radius: 10px;
+  max-width: 350px;
 }
 </style>

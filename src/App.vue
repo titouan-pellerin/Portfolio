@@ -27,7 +27,7 @@
       >
     </div>
   </div>
-  <router-view />
+    <router-view></router-view>
   <footer class="main-footer style-dark">
     <div class="socials-footer">
       <SocialIcon
@@ -66,8 +66,13 @@ export default {
         document.body.scrollTop > 80 ||
         document.documentElement.scrollTop > 80
       )
-        document.getElementsByTagName("body")[0].classList.add("window-scrolled");
-      else document.getElementsByTagName("body")[0].classList.remove("window-scrolled");
+        document
+          .getElementsByTagName("body")[0]
+          .classList.add("window-scrolled");
+      else
+        document
+          .getElementsByTagName("body")[0]
+          .classList.remove("window-scrolled");
     },
   },
   mounted() {
@@ -84,6 +89,7 @@ export default {
   --font-size-20: 20px;
   --font-size-40: 40px;
   --font-size-80: 80px;
+  --font-size-100: 100px;
 }
 
 html {
@@ -120,7 +126,7 @@ h6 {
   color: #fff;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -229,7 +235,6 @@ a{
 
 .socials-menu {
   left: 0;
-  font-size: var(--font-size-20);
 }
 
 .visufo-cta {
@@ -261,6 +266,18 @@ a{
   margin-bottom: 72px;
 }
 
+.margin-top-1x{
+  margin-top: 36px;
+}
+
+.margin-top-2x{
+  margin-top: 72px;
+}
+
+.padding-top-1x{
+  padding-top: 36px;
+}
+
 .box-shadow {
   box-shadow: 0px 30px 60px -30px rgb(0 0 0 / 45%);
 }
@@ -270,7 +287,7 @@ a{
   padding: 20px 0;
 }
 
-.scroll-top{
+.scroll-top {
   opacity: 0;
   position: fixed;
   right: 20px;
@@ -283,11 +300,38 @@ a{
   align-items: center;
   justify-content: center;
   background-color: var(--accent-color);
-  transition: opacity ease-in-out .3s;
+  transition: opacity ease-in-out 0.3s;
 }
 
-.window-scrolled .scroll-top{
+.window-scrolled .scroll-top {
   opacity: 1;
+}
+
+.scroll-down {
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.scroll-down i {
+  animation: bounce 2s infinite;
+  color: var(--accent-color);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 </style>

@@ -69,5 +69,332 @@
             "Visufo"
         ],
         "content": "Test content"
+    },
+    {
+        "id": 7,
+        "title": "Pikto Vidéo",
+        "slug": "pikto-video",
+        "caption": "Création d'un logo, d'une charte graphique et d'un site internet basé sur WordPress pour un vidéaste.",
+        "date": "2020-07-15",
+        "categories": [
+            "Développement",
+            "Design",
+            "WordPress",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 8,
+        "title": "Je viens d'ailleurs",
+        "slug": "je-viens-dailleurs",
+        "caption": "Création du site Je viens d'ailleurs, plateforme d'aide aux réfugiés dans l'ouest, lors du projet de fin de première année de DUT MMI. Le site créé lors de 3 semaines de développement a pour but d'aider les réfugiés dans leur intégration dans la société française. Ce projet a été une opportunité de travailler en groupe et de mettre en place une gestion de projet agile",
+        "date": "2020-06-15",
+        "categories": [
+            "Développement",
+            "Design",
+            "MMI"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 9,
+        "title": "Portfolio MMI",
+        "slug": "portfolio-mmi",
+        "caption": "Site Internet réalisé lors de ma première année de DUT Métiers du Multimédia et de l'Internet en HTML/CSS et Javascript.",
+        "date": "2020-06-15",
+        "categories": [
+            "Développement",
+            "Design",
+            "MMI"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 10,
+        "title": "Blog Visufo",
+        "slug": "blog-visufo",
+        "caption": "Rédaction de trois articles pour le lancement de notre blog Visufo.",
+        "date": "2020-05-15",
+        "categories": [
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 11,
+        "title": "Sites Amocas",
+        "slug": "sites-amocas",
+        "caption": "Sites Internet basés sur WordPress réalisés pour l'association AMOCAS à Mordelles.",
+        "date": "2020-04-15",
+        "categories": [
+            "Développement",
+            "Design",
+            "WordPress"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 12,
+        "title": "Charte graphique SGS",
+        "slug": "charte-graphique-sgs",
+        "caption": "Réalisation d'un logo et d'une charte graphique pour la Serious Games Society : un groupe de réflexion lié au serious games et au numérique.",
+        "date": "2020-03-15",
+        "categories": [
+            "Design",
+            "MMI"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 13,
+        "title": "Site Visufo",
+        "slug": "site-visufo",
+        "caption": "Site internet basé sur WordPress réalisé pour l'association Visufo dont je fais partie.",
+        "date": "2020-03-15",
+        "categories": [
+            "Développement",
+            "Design",
+            "WordPress",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 14,
+        "title": "La Mèche Rebelle",
+        "slug": "meche-rebelle",
+        "caption": "Aftermovie de la troisième édition du Festival La Mèche Rebelle réalisé avec Visufo. Festival organisé à L'Antichambre à Mordelles par l'AMOCAS. ",
+        "date": "2019-12-15",
+        "categories": [
+            "Audiovisuel",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 15,
+        "title": "Séquence d'images",
+        "slug": "sequence-dimages",
+        "caption": "Réalisation d'une séquence d'images dans le cadre d'un cours d'infographie en MMI à l'aide des logiciels Affinity Photo et Adobe Photoshop Lightroom.",
+        "date": "2019-12-15",
+        "categories": [
+            "Design",
+            "Audiovisuel",
+            "MMI"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 16,
+        "title": "Une gorgée de trop !",
+        "slug": "gorgee-de-trop",
+        "caption": "Réalisation d'une affiche en cours d'infographie dénonçant les problèmes environnementaux de la société actuelle. Notamment les problèmes liés à l'eau et au gaspillage. L'affiche a été réalisée sur le logiciel Affinity Designer et est une tirée d'une photographie que j'ai réalisé.",
+        "date": "2019-11-15",
+        "categories": [
+            "Design",
+            "Audiovisuel",
+            "MMI"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 17,
+        "title": "CAP+, 8 mois plus tard",
+        "slug": "cap-plus-8-mois",
+        "caption": "Reportage réalisé avec Visufo 8 mois après le premier. Retrouvez les témoignages des jeunes après 8 mois passés dans la formation CAP+. Une formation adaptée aux réfugiés pour apprendre le français et un métier.",
+        "date": "2019-11-15",
+        "categories": [
+            "Audiovisuel",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 18,
+        "title": "Bijoux de verre",
+        "slug": "bijoux-de-verre",
+        "caption": "Série de photographies et vidéos réalisée avec Visufo pour Virginie le Stunff créatrice de bijoux.",
+        "date": "2019-09-15",
+        "categories": [
+            "Audiovisuel",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 19,
+        "title": "Mordelles Métiers d'Art",
+        "slug": "mordelles-metiers-dart",
+        "caption": "Site Internet basé sur WordPress réalisé pour le salon Mordelles Métiers d'Art organisé par l'association AMOCAS à Mordelles.",
+        "date": "2019-08-15",
+        "categories": [
+            "Développement",
+            "Design",
+            "WordPress",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 20,
+        "title": "L'Antichambre Mordelles",
+        "slug": "lantichambre-mordelles",
+        "caption": "Site Internet basé sur WordPress réalisé pour la salle l'Antichambre gérée par l'association AMOCAS à Mordelles.",
+        "date": "2019-08-15",
+        "categories": [
+            "Développement",
+            "Design",
+            "WordPress",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 21,
+        "title": "Protège ton jardin",
+        "slug": "protege-ton-jardin",
+        "caption": "Réalisation d'une application Android informant l'utilisateur lorsque ses plantes risquent de geler selon la météo. Application développée en Java avec Android Studio. Ce projet a été réalisé au lycée en Terminale.",
+        "date": "2019-05-15",
+        "categories": [
+            "Développement",
+            "Design"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 22,
+        "title": "Mordelles Métiers d'Art 2019",
+        "slug": "mordelles-metiers-dart-2019",
+        "caption": "Reportage réalisé avec Visufo pour l'Amocas lors du salon Mordelles Métiers d'Art organisé dans le cadre des Journées Européennes des Métiers d'Art.",
+        "date": "2019-04-15",
+        "categories": [
+            "Audiovisuel",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 23,
+        "title": "Eddy De Pretto et Hervé au Liberté",
+        "slug": "eddy-de-pretto",
+        "caption": "Photos réalisées pour l’Antipode MJC lors du concert d’Eddy de Pretto au Liberté. Première partie : Hervé.",
+        "date": "2019-04-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 24,
+        "title": "Touré Kunda",
+        "slug": "toure-kunda",
+        "caption": "Photos réalisées à l'Antichambre pour l'AMOCAS lors du concert des Touré Kunda.",
+        "date": "2019-03-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 25,
+        "title": "Lord Esperanza, Kikesa Et Moka Boka",
+        "slug": "lord-esperanza-kikesa-moka-boka",
+        "caption": "Photos réalisées pour l’Antipode MJC lors du concert de Lord Esperanza, Kikesa et Moka Boka.",
+        "date": "2019-03-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 26,
+        "title": "Ouverture Festival Urbaines",
+        "slug": "ouverture-festival-urbaines",
+        "caption": "Couverture photo et vidéo de l'ouverture du Festival Urbaines pour l'Antipode MJC à Rennes.",
+        "date": "2019-03-15",
+        "categories": [
+            "Audiovisuel",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 27,
+        "title": "Interzone et Yoann Minkoff & Kris Nolly",
+        "slug": "interzone",
+        "caption": "Photos réalisée pour l'AMOCAS à l’Antichambre pour le concert d’Interzone avec Serge Teyssot-Gay. Première partie : Yoann Minkoff & Kris Nolly.",
+        "date": "2019-03-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 28,
+        "title": "Île de Groix",
+        "slug": "ile-de-groix",
+        "caption": "Photos réalisées sur l’Île de Groix pendant les vacances de Noël 2018.",
+        "date": "2019-01-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 29,
+        "title": "Reportage Formation CAP+",
+        "slug": "reportage-cap-plus",
+        "caption": "Reportage réalisé avec Visufo pour le Bâtiment CFA Ille et Vilaine sur le CAP+. Une formation destinée à des jeunes d’origine étrangère pour les aider à apprendre le français ainsi qu’un métier.",
+        "date": "2018-11-15",
+        "categories": [
+            "Audiovisuel",
+            "Visufo"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 30,
+        "title": "Ile O par la compagnie Barolosolo",
+        "slug": "ile-o-barolosolo",
+        "caption": "Photos réalisées lors du spectacle Ile O par la compagnie Barolosolo pour l'AMOCAS à Mordelles.",
+        "date": "2018-10-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 31,
+        "title": "The Decline !",
+        "slug": "the-decline",
+        "caption": "Photos réalisées pour l’Antipode MJC lors du dernier concert des rennais The Decline !, accompagnés par Justin(e), Not Scientists et Shut Up! Twist Again!",
+        "date": "2018-10-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 32,
+        "title": "Her et Otzeki au Liberté",
+        "slug": "her-otzeki",
+        "caption": "Photos réalisées pour l’Antipode MJC lors du concert de Her et Otzeki au Liberté à Rennes.",
+        "date": "2018-10-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 33,
+        "title": "Voyage au Groenland",
+        "slug": "voyage-au-groenland",
+        "caption": "Photos réalisées au Groenland lors d'un voyage pendant l'été 2017.",
+        "date": "2017-08-15",
+        "categories": [
+            "Audiovisuel"
+        ],
+        "content": "Test content"
     }
 ]

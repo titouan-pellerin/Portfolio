@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="'/works/'+slug" class="work-card">
+  <router-link :to="'/works/' + slug" class="work-card">
     <img
-      :src="'works/' + slug + '.jpg'"
+      :src="'/works/' + slug + '.jpg'"
       :alt="'Photo d\'illustration ' + title"
     />
     <div class="work-overlay">
@@ -23,7 +23,7 @@ export default {
     slug: String,
     categories: Array,
     image: String,
-  },
+  }
 };
 </script>
 
@@ -35,15 +35,11 @@ export default {
   overflow: hidden;
   text-align: center;
   color: #fff;
-}
-
-.work-overlay {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  flex: 1 0 25%;
+  min-width: 350px;
 }
 
 .work-card img {
@@ -68,6 +64,13 @@ export default {
   justify-content: center;
   flex-direction: column;
   transition: opacity ease-in-out 0.3s;
+  padding: 10px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .work-card:hover .work-overlay {

@@ -5,16 +5,7 @@ import {
 import Home from '../views/Home.vue'
 import Work from '../views/Work.vue'
 
-const scrollBehavior = (to, from, savedPosition) => {
-  if (savedPosition) {
-    return savedPosition;
-  } else {
-    return {
-      x: 0,
-      y: 0
-    }
-  }
-};
+
 const routes = [{
     path: '/',
     name: 'Home',
@@ -48,7 +39,6 @@ const routes = [{
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  scrollBehavior,
   routes
 })
 
