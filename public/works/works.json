@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "title": "Amocas Dashboard",
+        "slug": "amocas-dashboard",
+        "caption": "Web app permettant à une association de gérer ses adhérents. L'association en question propose des ateliers dispensés par des animateurs.",
+        "date": "2021-02-15",
+        "categories": [
+            "Développement",
+            "Design"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 2,
+        "title": "La Tour de Babel",
+        "slug": "tour-de-babel",
+        "caption": "Réalisation d'une vidéo en motion design dans le cadre du cours de création graphique en DUT MMI. Le but était de présenter une œuvre en animant des images fixes. Projet réalisé avec Adobe Photoshop, Adobe Premiere Pro, Adobe After Effects et Blender.",
+        "date": "2021-01-15",
+        "categories": [
+            "Design",
+            "Audiovisuel",
+            "MMI"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 3,
+        "title": "Modélisation 3D Blender",
+        "slug": "modelisation-3d-blender",
+        "caption": "Modélisation 3D d'un personnage dessiné en 2D pendant ma première année de DUT. Après avoir modélisé ce personnage, il fallait l'intégrer dans un environnement et réaliser une affiche. Utilisation du logiciel Blender.",
+        "date": "2021-01-15",
+        "categories": [
+            "Design",
+            "MMI"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 4,
+        "title": "Affiches Pour La Cérémonie Du Triomphe",
+        "slug": "affiches-triomphe",
+        "caption": "Réalisation de quatre propositions d'affiches pour la cérémonie du Triomphe dans le cadre de mon alternance aux Écoles de Saint-Cyr Coëtquidan",
+        "date": "2021-01-15",
+        "categories": [
+            "Design"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 5,
+        "title": "Plaquette de remise des sabres de l'EMIA",
+        "slug": "plaquette-remise-sabres",
+        "caption": "Plaquette réalisée dans le cadre de mon alternance aux Écoles de Saint-Cyr Coëtquidan.",
+        "date": "2020-11-15",
+        "categories": [
+            "Design"
+        ],
+        "content": "Test content"
+    },
+    {
+        "id": 6,
+        "title": "Concert Cali",
+        "slug": "concert-cali",
+        "caption": "Photos réalisées pour l'association Amocas lors du concert de Cali à l'Antichambre à Mordelles.",
+        "date": "2020-11-15",
+        "categories": [
+            "Audiovisuel",
+            "Visufo"
+        ],
+        "content": "Test content"
+    }
+]

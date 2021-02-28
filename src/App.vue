@@ -28,6 +28,30 @@
     </div>
   </div>
   <router-view />
+  <footer class="main-footer style-dark">
+    <div class="socials-footer">
+      <SocialIcon
+        icon="fa-github"
+        link="https://github.com/titouan-pellerin"
+      ></SocialIcon>
+      <SocialIcon
+        icon="fa-facebook-f"
+        link="https://www.facebook.com/titouan.pellerin"
+      ></SocialIcon>
+      <SocialIcon
+        icon="fa-linkedin-in"
+        link="https://www.linkedin.com/in/titouan-pellerin-24352b1a1/"
+      ></SocialIcon>
+    </div>
+    <p>
+      © {{ new Date().getFullYear() }} Titouan PELLERIN. | Tous droits réservés.
+    </p>
+    <p>
+      Mentions légales | Politique de confidentialité | Préférences de
+      confidentialité
+    </p>
+  </footer>
+  <a href="#" class="scroll-top style-dark"><i class="fas fa-angle-up"></i></a>
 </template>
 <script>
 import SocialIcon from "@/components/SocialIcon.vue";
@@ -42,13 +66,13 @@ export default {
         document.body.scrollTop > 80 ||
         document.documentElement.scrollTop > 80
       )
-        document.getElementById("nav").classList.add("reduced");
-      else document.getElementById("nav").classList.remove("reduced");
+        document.getElementsByTagName("body")[0].classList.add("window-scrolled");
+      else document.getElementsByTagName("body")[0].classList.remove("window-scrolled");
     },
   },
   mounted() {
-    window.addEventListener("scroll", this.scrollFunction)
-  }
+    window.addEventListener("scroll", this.scrollFunction);
+  },
 };
 </script>
 
@@ -58,6 +82,7 @@ export default {
   --accent-color-70: #439dfeb4;
   --darker-accent-color: #3884d4;
   --font-size-20: 20px;
+  --font-size-40: 40px;
   --font-size-80: 80px;
 }
 
@@ -66,7 +91,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #141618;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -95,6 +120,42 @@ h6 {
   color: #fff;
 }
 
+a{
+  text-decoration: none;
+}
+
+.style-dark a:not(.btn) {
+  color: #fff;
+}
+
+.style-light a:not(.btn) {
+  color: #000;
+}
+.link {
+  position: relative;
+}
+.link::after {
+  content: "";
+  background: var(--accent-color-70);
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
+  z-index: -1;
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+
+.bg-visufo::after {
+  background: #ea7550;
+}
+
+.link:hover::after {
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .btn {
   background-color: var(--accent-color);
   padding: 12px 30px;
@@ -119,15 +180,12 @@ h6 {
   box-sizing: border-box;
   z-index: 100;
   background-color: transparent;
-  transition: background-color ease-in-out .4s;
-
+  transition: background-color ease-in-out 0.4s;
 }
 
-#nav.reduced {
+.window-scrolled #nav {
   background-color: #131313;
 }
-
-
 
 .nav-wrapper {
   text-transform: uppercase;
@@ -135,7 +193,7 @@ h6 {
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: ease-in-out .4s;
+  transition: ease-in-out 0.4s;
 }
 
 #nav a {
@@ -159,9 +217,9 @@ h6 {
 
 .menu-logo img {
   width: 100px;
-  transition: width ease-in-out .4s;
+  transition: width ease-in-out 0.4s;
 }
-#nav.reduced .menu-logo img {
+.window-scrolled .menu-logo img {
   width: 50px;
 }
 .socials-menu,
@@ -171,13 +229,19 @@ h6 {
 
 .socials-menu {
   left: 0;
+  font-size: var(--font-size-20);
 }
 
 .visufo-cta {
   right: 0;
+  background-color: #ea7550;
 }
 
-.category{
+.visufo-cta:hover {
+  background-color: #dd6843;
+}
+
+.category {
   padding: 5px 12px;
   font-weight: 600;
   font-size: 14px;
@@ -186,7 +250,44 @@ h6 {
   border: 2px solid rgba(255, 255, 255, 0.473);
 }
 
-.category:not(:last-child){
+.category:not(:last-child) {
   margin-right: 5px;
 }
+
+.margin-bottom-1x {
+  margin-bottom: 36px;
+}
+.margin-bottom-2x {
+  margin-bottom: 72px;
+}
+
+.box-shadow {
+  box-shadow: 0px 30px 60px -30px rgb(0 0 0 / 45%);
+}
+
+.main-footer {
+  background-color: #131313;
+  padding: 20px 0;
+}
+
+.scroll-top{
+  opacity: 0;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  transition: opacity ease-in-out .3s;
+}
+
+.window-scrolled .scroll-top{
+  opacity: 1;
+}
+
 </style>

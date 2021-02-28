@@ -1,16 +1,18 @@
 <template>
-  <a :href="'works/' + slug" class="work-card">
+  <router-link :to="'/works/'+slug" class="work-card">
     <img
-      :src="require('@/assets/images/' + image)"
+      :src="'works/' + slug + '.jpg'"
       :alt="'Photo d\'illustration ' + title"
     />
     <div class="work-overlay">
       <h2>{{ title }}</h2>
       <p class="work-categories">
-        <span v-for="category in categories" :key="category.title" class="category">{{ category.title }}</span>
+        <span v-for="category in categories" :key="category" class="category">{{
+          category
+        }}</span>
       </p>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script>
@@ -21,14 +23,12 @@ export default {
     slug: String,
     categories: Array,
     image: String,
-  }
-  
+  },
 };
 </script>
 
 <style>
 .work-card {
-  width: 33%;
   height: 350px;
   position: relative;
   border-radius: 10px;
@@ -41,7 +41,7 @@ export default {
   position: absolute;
   height: 100%;
   top: 0;
-  left:0;
+  left: 0;
   right: 0;
   bottom: 0;
 }
@@ -49,6 +49,8 @@ export default {
 .work-card img {
   position: absolute;
   height: 100%;
+  min-width: 100%;
+  object-fit: cover;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -80,6 +82,4 @@ export default {
   font-size: 40px;
   margin: 0;
 }
-
-
 </style>
