@@ -20,7 +20,7 @@
       <router-link class="menu-logo" to="/"
         ><img alt="Logo Titouan" src="./assets/logo.svg"
       /></router-link>
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/#about" >À propos</router-link>
       <router-link to="/contact">Contact</router-link>
       <a class="btn visufo-cta" href="https://visufo.fr" target="_blank"
         >Visufo</a

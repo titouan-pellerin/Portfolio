@@ -14,8 +14,18 @@
     </header>
     <section class="works-section margin-bottom-1x">
       <ul class="work-filter style-dark">
-        <li class="cat-filter selected" @click="filterWorks" data-cat="all"><a href="#">Tout</a></li>
-        <li v-for="category in categories" :key="category" @click="filterWorks" class="cat-filter" :data-cat="category"><a href="#">{{category}}</a></li>
+        <li class="cat-filter selected" @click="filterWorks" data-cat="all">
+          <a href="#">Tout</a>
+        </li>
+        <li
+          v-for="category in categories"
+          :key="category"
+          @click="filterWorks"
+          class="cat-filter"
+          :data-cat="category"
+        >
+          <a href="#">{{ category }}</a>
+        </li>
       </ul>
       <div class="works-container padding-top-1x">
         <WorkCard
@@ -24,6 +34,8 @@
           :title="work.title"
           :categories="work.categories"
           :slug="work.slug"
+          :date="work.date"
+          :caption="work.caption"
           :data-cat="work.categories"
         ></WorkCard>
       </div>
@@ -45,7 +57,7 @@ export default {
   data: function () {
     return {
       works: "",
-      categories: ""
+      categories: "",
     };
   },
   methods: {
@@ -53,26 +65,30 @@ export default {
       let categories = new Array();
       this.works.forEach((work) => {
         work.categories.forEach((category) => {
-          if(!categories.includes(category))
-            categories.push(category);
+          if (!categories.includes(category)) categories.push(category);
         });
       });
       this.categories = categories;
     },
-    filterWorks(e){
+    filterWorks(e) {
       e.preventDefault();
-      let works = document.getElementsByClassName('work-card');
+      let works = document.getElementsByClassName("work-card");
       let currentFilter = e.currentTarget;
       let currentCat = currentFilter.dataset.cat;
-      document.querySelector('.selected.cat-filter').classList.remove('selected');
-      currentFilter.classList.add('selected');
-      works.forEach(work => {
-        work.classList.remove('work-hide');
-        if(!work.dataset.cat.split(',').includes(currentCat) && currentCat != 'all'){
-          work.classList.add('work-hide');
+      document
+        .querySelector(".selected.cat-filter")
+        .classList.remove("selected");
+      currentFilter.classList.add("selected");
+      works.forEach((work) => {
+        work.classList.remove("work-hide");
+        if (
+          !work.dataset.cat.split(",").includes(currentCat) &&
+          currentCat != "all"
+        ) {
+          work.classList.add("work-hide");
         }
       });
-    },    
+    },
   },
   beforeMount() {
     this.works = JSON.parse(localStorage.works);
@@ -125,21 +141,18 @@ export default {
 .header-subtitle {
   font-size: var(--font-size-40);
 }
-.works-section{
+.works-section {
   position: relative;
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-
 }
 .works-container {
   display: flex;
   flex-wrap: wrap;
-
-
 }
 
-.work-filter{
+.work-filter {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -151,18 +164,22 @@ export default {
   font-size: 14px;
 }
 
-.cat-filter{
+.cat-filter {
   margin: 10px;
 }
-
-.selected.cat-filter a{
+.cat-filter a {
+  transition: color ease-in-out 0.3s;
+}
+.cat-filter:hover a {
   color: var(--accent-color);
-  transition: color ease-in-out .3s;
-
 }
 
-.work-hide{
+.selected.cat-filter a {
+  color: var(--accent-color);
+  transition: color ease-in-out 0.3s;
+}
+
+.work-hide {
   display: none;
 }
-
 </style>

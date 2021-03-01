@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="'/works/' + slug" class="work-card">
+  <router-link :to="{name: 'Work', params: { title: title, slug: slug, categories:categories, image:image, caption:caption, date:date}}" class="work-card">
     <img
       :src="'/works/' + slug + '.jpg'"
       :alt="'Photo d\'illustration ' + title"
@@ -23,6 +23,8 @@ export default {
     slug: String,
     categories: Array,
     image: String,
+    caption: String,
+    date: String
   }
 };
 </script>

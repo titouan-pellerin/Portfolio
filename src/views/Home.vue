@@ -52,6 +52,8 @@
             :title="work.title"
             :categories="work.categories"
             :slug="work.slug"
+            :date="work.date"
+            :caption="work.caption"
             :data-id="work.id"
           ></WorkCard>
         </div>
