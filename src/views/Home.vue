@@ -165,7 +165,6 @@ export default {
 <style scoped>
 .home header {
   position: relative;
-  height: 80vh;
 }
 
 .header-layer {
@@ -193,12 +192,15 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+  min-height: 80vh;
+  padding: 120px 50px;
+  box-sizing: border-box;
+
 }
 
 .header-title {
-  font-size: var(--font-size-80);
   text-align: center;
+  font-size: var(--font-size-60);
 }
 
 .header-caption {

@@ -83,14 +83,16 @@ export default {
 
 <style>
 :root {
+  font-size: 62.5%;
   --accent-color: #439efe;
   --accent-color-70: #439dfeb4;
   --darker-accent-color: #3884d4;
-  --font-size-20: 20px;
-  --font-size-40: 40px;
-  --font-size-80: 80px;
-  --font-size-100: 100px;
-  --font-size-120: 120px;
+  --font-size-20: 2rem;
+  --font-size-40: 4rem;
+  --font-size-60: 6rem;
+  --font-size-80: 8rem;
+  --font-size-100: 10rem;
+  --font-size-120: 12rem;
 }
 
 html {
@@ -188,6 +190,7 @@ a {
   z-index: 100;
   background-color: transparent;
   transition: background-color ease-in-out 0.4s;
+  font-size: 1.6rem;
 }
 
 .window-scrolled #nav {
