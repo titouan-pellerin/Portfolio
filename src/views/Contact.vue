@@ -16,19 +16,38 @@
       </div>
     </header>
     <section class="form-section margin-bottom-1x margin-top-1x">
-      <form class="contact-form" method="get">
+      <form class="contact-form" method="post" action="">
         <div class="form-row">
           <div class="form-col">
             <label for="fullname">Nom et prénom</label>
-            <input required id="fullname" type="text" v-model="fullname">
+            <input
+              name="fullname"
+              required
+              id="fullname"
+              type="text"
+              v-model="fullname"
+            />
           </div>
           <div class="form-col">
             <label for="email">Adresse e-mail</label>
-            <input required id="email" type="email" v-model="email">
+            <input
+              name="email"
+              required
+              id="email"
+              type="email"
+              v-model="email"
+            />
           </div>
         </div>
         <label for="message">Message</label>
-        <textarea rows="8" required id="message"></textarea>
+        <textarea
+          name="message"
+          rows="8"
+          required
+          id="message"
+          v-model="message"
+        ></textarea>
+        <input type="submit" value="Envoyer" />
       </form>
     </section>
   </div>
@@ -39,11 +58,40 @@ import UnderlinedTitle from "@/components/UnderlinedTitle.vue";
 
 export default {
   name: "Contact",
-    components: {
-      UnderlinedTitle,
-      
-  }
-}
+  components: {
+    UnderlinedTitle,
+  },
+  data: function () {
+    return {
+      fullname: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    submitForm() {
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const data = new URLSearchParams();
+        for (const pair of new FormData(form)) {
+          data.append(pair[0], pair[1]);
+        }
+        let fetchData = {
+          method: "POST",
+          body: data,
+          headers: new Headers(),
+        };
+        console.log(data);
+        fetch("http://mail.titouanpellerin.info/", fetchData);
+      });
+    },
+  },
+  mounted() {
+    this.submitForm();
+  },
+};
 </script>
 
 <style scoped>
@@ -64,7 +112,8 @@ export default {
 }
 
 .header-bg-wrapper {
-  background: center / cover no-repeat url("../assets/images/contact-header.jpg");
+  background: center / cover no-repeat
+    url("../assets/images/contact-header.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -92,7 +141,7 @@ export default {
   font-size: var(--font-size-40);
 }
 
-.contact-form{
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,40 +150,40 @@ export default {
   margin: auto;
 }
 
-.form-row{
+.form-row {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.form-col{
+.form-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
 }
 
-.contact-form label{
+.contact-form label {
   font-family: "EB Garamond", "serif";
   font-size: var(--font-size-20);
   font-weight: 600;
 }
 
-.contact-form input, 
-.contact-form textarea{
+.contact-form input,
+.contact-form textarea {
   font-size: var(--font-size-20);
   border-radius: 5px;
 }
 
-.contact-form input:first-child{
+.contact-form input:first-child {
   margin-right: 10px;
 }
 
-.contact-form input:last-child{
+.contact-form input:last-child {
   margin-left: 10px;
 }
 
-.contact-form textarea{
+.contact-form textarea {
   resize: vertical;
   width: 100%;
 }
