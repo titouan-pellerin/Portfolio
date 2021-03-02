@@ -51,7 +51,8 @@ export default {
     getDate() {
       return this.Date.toLocaleString("default", { month: "long" }) + ' ' + this.Date.getFullYear()
     }
-  }
+  },
+    
 }
 </script>
 

@@ -1,18 +1,20 @@
 <template>
-  <router-link :to="{name: 'Work', params: { title: title, slug: slug, categories:categories, image:image, caption:caption, date:date}}" class="work-card">
-    <img
-      :src="'/works/' + slug + '.jpg'"
-      :alt="'Photo d\'illustration ' + title"
-    />
-    <div class="work-overlay">
-      <h2>{{ title }}</h2>
-      <p class="work-categories">
-        <span v-for="category in categories" :key="category" class="category">{{
-          category
-        }}</span>
-      </p>
-    </div>
-  </router-link>
+  <transition name="fade">
+    <router-link :to="{name: 'Work', params: { title: title, slug: slug, categories:categories, image:image, caption:caption, date:date}}" class="work-card">
+      <img
+        :src="'/works/' + slug + '.jpg'"
+        :alt="'Photo d\'illustration ' + title"
+      />
+      <div class="work-overlay">
+        <h2>{{ title }}</h2>
+        <p class="work-categories">
+          <span v-for="category in categories" :key="category" class="category">{{
+            category
+          }}</span>
+        </p>
+      </div>
+    </router-link>
+  </transition>
 </template>
 
 <script>
@@ -59,7 +61,7 @@ export default {
 }
 
 .work-overlay {
-  background-color: rgba(19, 19, 19, 0.7);
+  background-color: rgba(19, 19, 19, 0.5);
   opacity: 1;
   display: flex;
   align-items: center;

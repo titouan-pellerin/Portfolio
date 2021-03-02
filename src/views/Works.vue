@@ -1,7 +1,7 @@
 <template>
   <div class="works">
     <header class="style-dark">
-      <div class="header-bg-wrapper"></div>
+      <div class="header-bg-wrapper kenburns-bg"></div>
       <div class="header-layer"></div>
       <div class="header-content">
         <h1 class="header-title">Créations</h1>
@@ -37,6 +37,7 @@
           :date="work.date"
           :caption="work.caption"
           :data-cat="work.categories"
+          class="zoom-in"
         ></WorkCard>
       </div>
     </section>
@@ -101,6 +102,7 @@ export default {
 .works header {
   position: relative;
   height: 80vh;
+  overflow: hidden;
 }
 
 .header-layer {
@@ -132,7 +134,7 @@ export default {
 }
 
 .header-title {
-  font-size: var(--font-size-100);
+  font-size: var(--font-size-120);
   color: var(--accent-color);
   text-align: center;
   margin: 0;
@@ -182,4 +184,6 @@ export default {
 .work-hide {
   display: none;
 }
+
+
 </style>

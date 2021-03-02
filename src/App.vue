@@ -77,7 +77,7 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.scrollFunction);
-  },
+  }
 };
 </script>
 
@@ -90,6 +90,7 @@ export default {
   --font-size-40: 40px;
   --font-size-80: 80px;
   --font-size-100: 100px;
+  --font-size-120: 120px;
 }
 
 html {
@@ -334,4 +335,32 @@ a {
   }
 }
 
+.kenburns-bg{
+  animation: kenburns 15s ease alternate forwards;
+}
+
+@keyframes kenburns{
+  0%{
+    transform:scale(1)
+  }
+  100%{
+    transform:scale(1.15)
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom-in{
+  animation: zoom-in .6s;
+  opacity: 1;
+}
 </style>

@@ -12,7 +12,7 @@
         <p class="header-caption">
           Étudiant en deuxième année de DUT Métiers du Multimédia et de
           l'Internet et à la recherche d'une alternance pour l'année
-          prochaine.<br />
+          2021/2022.<br />
           Membre de
           <a class="link bg-visufo" href="https://visufo.fr/" target="_blank"
             >Visufo</a
@@ -38,7 +38,7 @@
             link="https://www.linkedin.com/in/titouan-pellerin-24352b1a1/"
           ></SocialIcon>
         </div>
-        <a class="scroll-down" id="works" href="#works"
+        <a class="scroll-down" id="scroll" href="#scroll"
           ><i class="fas fa-arrow-down"></i
         ></a>
       </div>
@@ -61,7 +61,7 @@
       <ButtonIcon
         content="Toutes mes créations"
         icon="fa-arrow-right"
-        url=""
+        url="/works"
         class="works-btn"
       ></ButtonIcon>
     </section>
@@ -165,7 +165,7 @@ export default {
 <style scoped>
 .home header {
   position: relative;
-  height: 100vh;
+  height: 80vh;
 }
 
 .header-layer {

@@ -1,8 +1,8 @@
 <template>
-  <a :href="url" class="btn btn-icon" :class="position">
+  <router-link :to="url" class="btn btn-icon" :class="position">
     {{ content }}
     <i class="fas" :class="icon"></i>
-  </a>
+  </router-link>
 </template>
 
 <script>
