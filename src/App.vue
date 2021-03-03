@@ -87,6 +87,7 @@ export default {
   --accent-color: #439efe;
   --accent-color-70: #439dfeb4;
   --darker-accent-color: #3884d4;
+  --font-size-15: 1.5rem;
   --font-size-20: 2rem;
   --font-size-40: 4rem;
   --font-size-60: 6rem;
@@ -131,6 +132,7 @@ h6 {
 
 a {
   text-decoration: none;
+  color: var(--accent-color)
 }
 
 .style-dark a:not(.btn) {
@@ -165,7 +167,7 @@ a {
   height: 100%;
 }
 
-.btn {
+.btn{
   background-color: var(--accent-color);
   padding: 12px 30px;
   border-radius: 10em;
@@ -175,9 +177,11 @@ a {
   display: inline-block;
   font-weight: 600;
   text-transform: uppercase;
+  border: none;
+  font-size: 1.6rem;
 }
 
-.btn:hover {
+.btn:hover{
   background-color: var(--darker-accent-color);
 }
 
@@ -289,6 +293,11 @@ a {
 .main-footer {
   background-color: #131313;
   padding: 20px 0;
+  font-size: 1.3rem;
+}
+
+.socials-footer{
+  font-size: var(--font-size-20);
 }
 
 .scroll-top {
@@ -304,7 +313,12 @@ a {
   align-items: center;
   justify-content: center;
   background-color: var(--accent-color);
-  transition: opacity ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+
+.scroll-top:hover{
+  background-color: var(--darker-accent-color);
 }
 
 .window-scrolled .scroll-top {

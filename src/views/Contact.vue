@@ -16,10 +16,16 @@
       </div>
     </header>
     <section class="form-section margin-bottom-1x margin-top-1x">
+      <UnderlinedTitle
+          class="header-subtitle"
+          size="h3"
+          content="N'hésitez pas à me contacter"
+        />
+        <p>Vous pouvez aussi me contacter directement par e-mail : <a href="mailto:contact@titouanpellerin.info">contact@titouanpellerin.info</a> ou encore par téléphone au <a href="tel://+33781841863">07 81 84 18 63</a>.</p>
       <form class="contact-form" method="post" action="">
         <div class="form-row">
           <div class="form-col">
-            <label for="fullname">Nom et prénom</label>
+            <label class="required" for="fullname">Nom et prénom</label>
             <input
               name="fullname"
               required
@@ -29,7 +35,7 @@
             />
           </div>
           <div class="form-col">
-            <label for="email">Adresse e-mail</label>
+            <label class="required" for="email">Adresse e-mail</label>
             <input
               name="email"
               required
@@ -39,15 +45,21 @@
             />
           </div>
         </div>
-        <label for="message">Message</label>
-        <textarea
-          name="message"
-          rows="8"
-          required
-          id="message"
-          v-model="message"
-        ></textarea>
-        <input type="submit" value="Envoyer" />
+        <div class="form-row">
+          <div class="form-col">
+            <label class="required" for="message">Message</label>
+            <textarea
+              name="message"
+              rows="8"
+              required
+              id="message"
+              v-model="message"
+            ></textarea>
+          </div>
+          
+        </div>
+        
+        <input type="submit" class="btn" value="Envoyer" />
       </form>
     </section>
   </div>
@@ -141,6 +153,10 @@ export default {
   font-size: var(--font-size-40);
 }
 
+.form-section p{
+  font-size: var(--font-size-15);
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -154,37 +170,54 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: 20px 0;
+
 }
 
 .form-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 100%;
+  margin: 0 10px;
 }
 
 .contact-form label {
   font-family: "EB Garamond", "serif";
   font-size: var(--font-size-20);
   font-weight: 600;
+  opacity: .7;
+  margin-bottom: 5px;
 }
 
-.contact-form input,
+.contact-form input:not([type=submit]),
 .contact-form textarea {
   font-size: var(--font-size-20);
   border-radius: 5px;
+  background-color: #EDEDEF;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Poppins', 'sans-serif';
 }
 
-.contact-form input:first-child {
-  margin-right: 10px;
-}
-
-.contact-form input:last-child {
-  margin-left: 10px;
-}
 
 .contact-form textarea {
   resize: vertical;
   width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+label.required::after{
+  content: '*';
+  color: red;
+}
+
+input[type=submit]{
+  cursor: pointer;
+}
+
+
+
 </style>
