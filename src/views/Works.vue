@@ -134,7 +134,7 @@ export default {
 }
 
 .header-title {
-  font-size: var(--font-size-120);
+  font-size: var(--font-size-80);
   color: var(--accent-color);
   text-align: center;
   margin: 0;
@@ -152,6 +152,8 @@ export default {
 .works-container {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
 }
 
 .work-filter {

@@ -143,7 +143,7 @@ export default {
 }
 
 .header-title {
-  font-size: var(--font-size-120);
+  font-size: var(--font-size-80);
   color: var(--accent-color);
   text-align: center;
   margin: 0;
@@ -218,6 +218,10 @@ input[type=submit]{
   cursor: pointer;
 }
 
-
+@media (max-width: 576px) {
+  .form-row{
+    flex-direction: column;
+  }
+}
 
 </style>

@@ -66,7 +66,7 @@
       ></ButtonIcon>
     </section>
     <section class="about-section style-light margin-bottom-1x">
-      <UnderlinedTitle class="header-title" size="h1" content="Qui suis-je ?" />
+      <UnderlinedTitle class="header-title" size="h1" content="Qui suis-je&nbsp?" />
       <p>
         Passionné par l'informatique et l'audiovisuel, j'aime tout ce qui à
         trait au multimédia. Je suis actuellement en deuxième année de DUT
@@ -193,12 +193,13 @@ export default {
   justify-content: center;
   flex-direction: column;
   min-height: 80vh;
+  max-height: 100vh;
   padding: 120px 50px;
   box-sizing: border-box;
 
 }
 
-.header-title {
+.header-title  {
   text-align: center;
   font-size: var(--font-size-60);
 }
@@ -266,7 +267,7 @@ export default {
 .about-section p {
   max-width: 1000px;
   display: inline-block;
-  font-size: var(--font-size-20);
+  font-size: var(--font-size-15);
 }
 
 .skills-wrapper {
@@ -279,5 +280,35 @@ export default {
   margin: 50px;
   border-radius: 10px;
   max-width: 350px;
+}
+
+@media (max-width: 576px) {
+  .header-title {
+    font-size: var(--font-size-40) !important;
+  }
+
+  .skills-portrait{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+  .skills-wrapper{
+    flex-direction: column;
+  }
+
+  .icon-box{
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (min-width: 1201px) {
 }
 </style>

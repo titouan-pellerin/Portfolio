@@ -1,6 +1,19 @@
 <template>
   <transition name="fade">
-    <router-link :to="{name: 'Work', params: { title: title, slug: slug, categories:categories, image:image, caption:caption, date:date}}" class="work-card">
+    <router-link
+      :to="{
+        name: 'Work',
+        params: {
+          title: title,
+          slug: slug,
+          categories: categories,
+          image: image,
+          caption: caption,
+          date: date,
+        },
+      }"
+      class="work-card"
+    >
       <img
         :src="'/works/' + slug + '.jpg'"
         :alt="'Photo d\'illustration ' + title"
@@ -8,9 +21,12 @@
       <div class="work-overlay">
         <h2>{{ title }}</h2>
         <p class="work-categories">
-          <span v-for="category in categories" :key="category" class="category">{{
-            category
-          }}</span>
+          <span
+            v-for="category in categories"
+            :key="category"
+            class="category"
+            >{{ category }}</span
+          >
         </p>
       </div>
     </router-link>
@@ -26,8 +42,8 @@ export default {
     categories: Array,
     image: String,
     caption: String,
-    date: String
-  }
+    date: String,
+  },
 };
 </script>
 
@@ -86,7 +102,13 @@ export default {
 }
 
 .work-card h2 {
-  font-size: 40px;
+  font-size: var(--font-size-40);
   margin: 0;
+}
+
+@media (max-width: 576px) {
+  .work-card {
+    min-width: 100%;
+  }
 }
 </style>

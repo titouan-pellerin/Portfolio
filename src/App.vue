@@ -1,5 +1,5 @@
 <template>
-  <div class="nav mobile-nav expandeed">
+  <div class="nav">
     <div class="nav-wrapper">
       <div class="socials-menu">
         <SocialIcon
@@ -15,21 +15,23 @@
           link="https://www.linkedin.com/in/titouan-pellerin-24352b1a1/"
         ></SocialIcon>
       </div>
-      <router-link to="/">Accueil</router-link>
-      <router-link to="/works">Créations</router-link>
-      <router-link class="menu-logo" to="/"
+      <router-link @click.prevent="menuLink('/')" to="/">Accueil</router-link>
+      <router-link @click.prevent="menuLink('/works')" to="/works">Créations</router-link>
+      <router-link @click.prevent="menuLink('/')" class="menu-logo" to="/"
         ><img alt="Logo Titouan" src="./assets/logo.svg"
       /></router-link>
-      <router-link to="/#about" >À propos</router-link>
-      <router-link to="/contact">Contact</router-link>
+      <router-link @click.prevent="menuLink('/#about')" to="/#about">À propos</router-link>
+      <router-link @click.prevent="menuLink('/contact')" to="/contact">Contact</router-link>
       <a class="btn visufo-cta" href="https://visufo.fr" target="_blank"
         >Visufo</a
       >
       <input class="menu-btn" type="checkbox" id="menu-btn" />
-      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
     </div>
   </div>
-    <router-view></router-view>
+  <router-view></router-view>
   <footer class="main-footer style-dark">
     <div class="socials-footer">
       <SocialIcon
@@ -76,21 +78,35 @@ export default {
           .getElementsByTagName("body")[0]
           .classList.remove("window-scrolled");
     },
+    mobileNav() {
+      let nav = document.querySelector(".nav");
+      let menuBtn = document.querySelector(".menu-btn");
+      menuBtn.addEventListener("change", (e) => {
+        if (e.target.checked) nav.classList.add("expanded");
+        else nav.classList.remove("expanded");
+      });
+    },
+    menuLink(to) {
+      this.$router.push(to);
+      document.querySelector(".menu-btn").checked = false;
+      document.querySelector(".nav").classList.remove("expanded");
+    },
   },
   mounted() {
     window.addEventListener("scroll", this.scrollFunction);
-  }
+    this.mobileNav();
+  },
 };
 </script>
 
 <style>
 :root {
-  font-size: 62.5%;
   --accent-color: #439efe;
   --accent-color-70: #439dfeb4;
   --darker-accent-color: #3884d4;
   --font-size-15: 1.5rem;
   --font-size-20: 2rem;
+  --font-size-30: 3rem;
   --font-size-40: 4rem;
   --font-size-60: 6rem;
   --font-size-80: 8rem;
@@ -99,6 +115,7 @@ export default {
 }
 
 html {
+  font-size: 62.5%;
   font-family: "Poppins", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -134,7 +151,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: var(--accent-color)
+  color: var(--accent-color);
 }
 
 .style-dark a:not(.btn) {
@@ -153,8 +170,8 @@ a {
   position: absolute;
   left: 20px;
   bottom: 0;
-  width: calc(100% - 15px);
-  height: calc(100% - 15px);
+  width: calc(100% - 1em);
+  height: calc(100% - 0.8em);
   z-index: -1;
   transition: 0.3s cubic-bezier(0.25, 0.1, 0, 2.05);
 }
@@ -169,7 +186,7 @@ a {
   height: 100%;
 }
 
-.btn{
+.btn {
   background-color: var(--accent-color);
   padding: 12px 30px;
   border-radius: 10em;
@@ -183,7 +200,7 @@ a {
   font-size: 1.6rem;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--darker-accent-color);
 }
 
@@ -195,8 +212,10 @@ a {
   box-sizing: border-box;
   z-index: 100;
   background-color: transparent;
-  transition: background-color ease-in-out 0.4s;
-  font-size: 1.6rem;
+  transition: all ease-in-out 0.4s;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
 }
 
 .window-scrolled .nav:not(.expanded) {
@@ -210,6 +229,7 @@ a {
   justify-content: center;
   position: relative;
   transition: ease-in-out 0.4s;
+  width: 100%;
 }
 
 .nav a {
@@ -235,7 +255,7 @@ a {
   width: 100px;
   transition: width ease-in-out 0.4s;
 }
-.window-scrolled .menu-logo img {
+.window-scrolled .nav .menu-logo img {
   width: 50px;
 }
 .socials-menu,
@@ -256,56 +276,10 @@ a {
   background-color: #dd6843;
 }
 
-.nav.mobile-nav{
-  height: 100px;
-}
-
-.nav.mobile-nav .nav-wrapper{
-  height: 100%;
-}
-
-.nav.mobile-nav a:not(.menu-logo):not(.menu-icon){
-  visibility: hidden;
-  opacity: 0;
-}
-
-.nav.mobile-nav .menu-logo{
-  position: absolute;
-  left:0;
-  margin: 0;
-}
-
-.nav.mobile-nav .menu-icon{
-  position: absolute;
-  right:0;
-  margin: 0;
-}
-
-.mobile-nav.expanded{
-  height: 100vh;
-  width: 100vw;
-  background-color: #131313;
-
-}
-
-.mobile-nav.expanded .nav-wrapper{
-  visibility: visible;
-  opacity: 1;
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
-}
-
-.nav.mobile-nav .menu-icon{
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-
 .nav .menu-icon {
   cursor: pointer;
   float: right;
-  padding: 28px 20px;
+  padding: 25px 20px;
   position: relative;
   user-select: none;
   display: none;
@@ -316,18 +290,18 @@ a {
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
+  transition: background 0.2s ease-out;
+  width: 20px;
 }
 
 .nav .menu-icon .navicon:before,
 .nav .menu-icon .navicon:after {
   background: #fff;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 100%;
 }
 
@@ -380,15 +354,15 @@ a {
   margin-bottom: 72px;
 }
 
-.margin-top-1x{
+.margin-top-1x {
   margin-top: 36px;
 }
 
-.margin-top-2x{
+.margin-top-2x {
   margin-top: 72px;
 }
 
-.padding-top-1x{
+.padding-top-1x {
   padding-top: 36px;
 }
 
@@ -402,7 +376,7 @@ a {
   font-size: 1.3rem;
 }
 
-.socials-footer{
+.socials-footer {
   font-size: var(--font-size-20);
 }
 
@@ -422,8 +396,7 @@ a {
   transition: ease-in-out 0.3s;
 }
 
-
-.scroll-top:hover{
+.scroll-top:hover {
   background-color: var(--darker-accent-color);
 }
 
@@ -432,7 +405,7 @@ a {
 }
 
 .scroll-down {
-  font-size: 30px;
+  font-size: var(--font-size-30);
   position: absolute;
   bottom: 10px;
 }
@@ -458,16 +431,16 @@ a {
   }
 }
 
-.kenburns-bg{
+.kenburns-bg {
   animation: kenburns 15s ease alternate forwards;
 }
 
-@keyframes kenburns{
-  0%{
-    transform:scale(1)
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
   }
-  100%{
-    transform:scale(1.15)
+  100% {
+    transform: scale(1.15);
   }
 }
 
@@ -482,8 +455,110 @@ a {
   }
 }
 
-.zoom-in{
-  animation: zoom-in .6s;
+.zoom-in {
+  animation: zoom-in 0.6s;
   opacity: 1;
+}
+
+@media (max-width: 576px) {
+  
+  
+  html{
+    font-size: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+   html[lang='']{
+    font-size: 55% ;
+  }
+}
+
+@media (max-width: 992px) {
+
+   html{
+    font-size: 60%;
+  }
+
+  .nav {
+    height: 70px;
+    padding: 10px;
+    font-size: var(--font-size-20);
+  
+  }
+
+  .nav .menu-logo img {
+    width: 50px;
+  }
+
+  .nav .nav-wrapper {
+    width: 100%;
+    height: 50px;
+  }
+
+  .nav .nav-wrapper > a:not(.menu-logo):not(.visufo-cta) {
+    margin: 5px 0;
+  }
+
+  .nav .socials-menu,
+  .nav .nav-wrapper .visufo-cta {
+    position: initial;
+    margin: 40px 0;
+  }
+
+  .nav a:not(.menu-logo):not(.menu-icon) {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .nav.expanded a:not(.menu-logo):not(.menu-icon) {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nav .nav-wrapper {
+    flex-direction: column;
+  }
+
+  .nav .nav-wrapper .menu-logo {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    top: 0;
+  }
+
+  .nav .menu-icon {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    top: 0;
+  }
+
+  .expanded {
+    height: 100vh;
+    width: 100%;
+    background-color: #131313;
+  }
+
+  .expanded .nav-wrapper {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav .menu-icon {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+   
+}
+
+@media (min-width: 1201px) {
 }
 </style>

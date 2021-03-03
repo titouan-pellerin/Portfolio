@@ -50,8 +50,13 @@ export default {
 }
 
 .icon-box p{
-  font-size: var(--font-size-20);
+  font-size: var(--font-size-15);
   margin: 0 0 10px 0;
   font-weight: 300;
 }
+
+@media (max-width: 576px) {
+  
+}
+
 </style>
