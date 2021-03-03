@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div class="nav mobile-nav expandeed">
     <div class="nav-wrapper">
       <div class="socials-menu">
         <SocialIcon
@@ -25,6 +25,8 @@
       <a class="btn visufo-cta" href="https://visufo.fr" target="_blank"
         >Visufo</a
       >
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     </div>
   </div>
     <router-view></router-view>
@@ -185,7 +187,7 @@ a {
   background-color: var(--darker-accent-color);
 }
 
-#nav {
+.nav {
   padding: 10px 30px;
   position: fixed;
   top: 0;
@@ -197,7 +199,7 @@ a {
   font-size: 1.6rem;
 }
 
-.window-scrolled #nav {
+.window-scrolled .nav:not(.expanded) {
   background-color: #131313;
 }
 
@@ -210,22 +212,22 @@ a {
   transition: ease-in-out 0.4s;
 }
 
-#nav a {
+.nav a {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
   transition-duration: 0.2s;
 }
 
-#nav a:not(.social-link) {
+.nav a:not(.social-link) {
   margin: 0 20px;
 }
 
-#nav a.router-link-exact-active {
+.nav a.router-link-exact-active {
   color: #439efe;
 }
 
-#nav a:not(.btn):hover {
+.nav a:not(.btn):hover {
   color: #439efe;
 }
 
@@ -252,6 +254,110 @@ a {
 
 .visufo-cta:hover {
   background-color: #dd6843;
+}
+
+.nav.mobile-nav{
+  height: 100px;
+}
+
+.nav.mobile-nav .nav-wrapper{
+  height: 100%;
+}
+
+.nav.mobile-nav a:not(.menu-logo):not(.menu-icon){
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav.mobile-nav .menu-logo{
+  position: absolute;
+  left:0;
+  margin: 0;
+}
+
+.nav.mobile-nav .menu-icon{
+  position: absolute;
+  right:0;
+  margin: 0;
+}
+
+.mobile-nav.expanded{
+  height: 100vh;
+  width: 100vw;
+  background-color: #131313;
+
+}
+
+.mobile-nav.expanded .nav-wrapper{
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.nav.mobile-nav .menu-icon{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  display: none;
+}
+
+.nav .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.nav .menu-icon .navicon:before,
+.nav .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.nav .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.nav .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.nav .menu-btn {
+  display: none;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
 }
 
 .category {
