@@ -1,28 +1,24 @@
 <template>
-  <transition name="fade">
+  <transition>
     <router-link
       :to="{
         name: 'Work',
         params: {
-          title: title,
-          slug: slug,
-          categories: categories,
-          image: image,
-          caption: caption,
-          date: date,
-        },
+          work: JSON.stringify(work),
+          slug: work.slug
+        }
       }"
       class="work-card"
     >
       <img
-        :src="'/works/' + slug + '.jpg'"
-        :alt="'Photo d\'illustration ' + title"
+        :src="'/works/' + work.slug + '.jpg'"
+        :alt="'Photo d\'illustration ' + work.title"
       />
       <div class="work-overlay">
-        <h2>{{ title }}</h2>
+        <h2>{{ work.title }}</h2>
         <p class="work-categories">
           <span
-            v-for="category in categories"
+            v-for="category in work.categories"
             :key="category"
             class="category"
             >{{ category }}</span
@@ -37,13 +33,9 @@
 export default {
   name: "WorkCard",
   props: {
-    title: String,
-    slug: String,
-    categories: Array,
-    image: String,
-    caption: String,
-    date: String,
+    work: Object
   },
+
 };
 </script>
 

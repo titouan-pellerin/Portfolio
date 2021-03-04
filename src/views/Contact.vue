@@ -224,7 +224,6 @@ input[type=submit]{
     flex-direction: column;
   }
 
-
   .form-col{
     margin: 0;
   }

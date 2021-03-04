@@ -49,11 +49,7 @@
           <WorkCard
             v-for="work in works.slice(0,6)"
             :key="work.title"
-            :title="work.title"
-            :categories="work.categories"
-            :slug="work.slug"
-            :date="work.date"
-            :caption="work.caption"
+            :work="work"
             :data-id="work.id"
           ></WorkCard>
         </div>
@@ -137,7 +133,6 @@ export default {
   },
   data: function () {
     return {
-      categories: [{ title: "Développement" }, { title: "Test" }],
       works: ''
     };
   },

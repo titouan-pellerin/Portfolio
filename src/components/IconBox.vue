@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-box" :class="'icon-box-'+alignment">
+  <div class="icon-box" :class="'icon-box-' + alignment">
     <i :class="icon"></i>
     <h2>{{ title }}</h2>
     <p>{{ content }}</p>
@@ -13,14 +13,13 @@ export default {
     icon: String,
     title: String,
     content: String,
-    alignment: String
+    alignment: String,
   },
 };
 </script>
 
 <style>
-
-.icon-box{
+.icon-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,35 +27,33 @@ export default {
   max-width: 400px;
 }
 
-.icon-box-left{ 
+.icon-box-left {
   align-items: flex-start;
   text-align: left;
 }
 
-.icon-box-right{ 
+.icon-box-right {
   align-items: flex-end;
   text-align: right;
 }
 
-.icon-box i{
+.icon-box i {
   color: var(--accent-color);
   font-size: 50px;
 }
 
-.icon-box h2{
+.icon-box h2 {
   font-weight: 600;
   font-size: var(--font-size-40);
   margin: 10px 0;
 }
 
-.icon-box p{
+.icon-box p {
   font-size: var(--font-size-15);
   margin: 0 0 10px 0;
   font-weight: 300;
 }
 
 @media (max-width: 576px) {
-  
 }
-
 </style>

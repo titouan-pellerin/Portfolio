@@ -7,53 +7,58 @@
         <UnderlinedTitle
           class="header-title"
           size="h1"
-          :content="title"
+          :content="workArray.title"
         />
-        <p class="header-caption">{{caption}}</p>
+        <p class="header-caption">{{ workArray.caption }}</p>
         <div class="work-info">
-          <p class="work-date">{{getDate}}</p>
-          <p class="work-categories">{{categories.join(', ')}}</p>
+          <p class="work-date">{{ getDate }}</p>
+          <p class="work-categories">{{ workArray.categories.join(", ") }}</p>
         </div>
       </div>
       <a class="scroll-down" id="works" href="#works"
-          ><i class="fas fa-arrow-down"></i
-        ></a>
+        ><i class="fas fa-arrow-down"></i
+      ></a>
     </header>
-    <h1>{{title}}</h1>
+    <Gallery
+      v-if="workArray.gallery"
+      :images="workArray.gallery.images"
+    ></Gallery>
   </div>
 </template>
 
 <script>
 import UnderlinedTitle from "@/components/UnderlinedTitle.vue";
+import Gallery from "@/components/Gallery.vue";
 
 export default {
   name: "Home",
   props: {
-    title: String,
-    slug: String,
-    categories: Array,
-    image: String,
-    caption: String,
-    date: String
+    work: {},
   },
   components: {
-    UnderlinedTitle
+    UnderlinedTitle,
+    Gallery,
   },
-  data: function(){
+  data: function () {
+    let workArray = JSON.parse(this.work);
     return {
-      Date : new Date(this.date)
-    }
+      workArray: workArray,
+      Date: new Date(workArray.date),
+    };
   },
   computed: {
     headerBg() {
-      return `background-image: url("/works/${this.slug}.jpg")`
+      return `background-image: url("/works/${this.workArray.slug}.jpg")`;
     },
     getDate() {
-      return this.Date.toLocaleString("default", { month: "long" }) + ' ' + this.Date.getFullYear()
-    }
+      return (
+        this.Date.toLocaleString("default", { month: "long" }) +
+        " " +
+        this.Date.getFullYear()
+      );
+    },
   },
-    
-}
+};
 </script>
 
 <style scoped>
@@ -99,17 +104,18 @@ export default {
   margin: 0;
 }
 
-.header-caption, .work-info {
+.header-caption,
+.work-info {
   font-size: var(--font-size-20);
 }
 
-.work-info{
+.work-info {
   display: flex;
   flex-wrap: wrap;
   font-weight: 500;
 }
 
-.work-date{
+.work-date {
   text-transform: capitalize;
   margin-right: 20px;
 }

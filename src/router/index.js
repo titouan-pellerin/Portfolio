@@ -3,7 +3,7 @@ import {
   createWebHistory
 } from 'vue-router'
 import Home from '../views/Home.vue'
-import Work from '../views/Work.vue'
+import PathNotFound from '../views/PathNotFound.vue'
 
 
 const routes = [{
@@ -18,14 +18,12 @@ const routes = [{
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Works.vue')
+    component: () => import( /* webpackChunkName: "works" */ '../views/Works.vue')
   }, {
     path: '/works/:slug',
     name: 'Work',
-    component: Work,
+    component: () => import( /* webpackChunkName: "work" */ '../views/Work.vue'),
     props: true
-
-
   },
   {
     path: '/contact',
@@ -33,8 +31,10 @@ const routes = [{
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Contact.vue')
-  }
+    component: () => import( /* webpackChunkName: "contact" */ '../views/Contact.vue')
+  },
+  { path: '/:pathMatch(.*)*', component: PathNotFound },
+
 ]
 
 const router = createRouter({

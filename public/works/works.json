@@ -395,6 +395,26 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": {
+            "title": "Les photos",
+            "images": [
+                {
+                    "url": "/works/affiches-triomphe.jpg",
+                    "title": "Affiches Triomphe"
+                },
+                {
+                    "url": "/works/affiches-triomphe.jpg",
+                    "title": "Affiches Triomphe"
+                },
+                {
+                    "url": "/works/affiches-triomphe.jpg",
+                    "title": "Affiches Triomphe"
+                },
+                {
+                    "url": "/works/affiches-triomphe.jpg",
+                    "title": "Affiches Triomphe"
+                }
+            ]
+        }
     }
 ]

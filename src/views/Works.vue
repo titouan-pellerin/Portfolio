@@ -31,11 +31,7 @@
         <WorkCard
           v-for="work in works"
           :key="work.title"
-          :title="work.title"
-          :categories="work.categories"
-          :slug="work.slug"
-          :date="work.date"
-          :caption="work.caption"
+          :work="work"
           :data-cat="work.categories"
           class="zoom-in"
         ></WorkCard>
