@@ -164,6 +164,7 @@ export default {
   justify-content: center;
   max-width: 1000px;
   margin: auto;
+  padding: 0 10px;
 }
 
 .form-row {
@@ -221,6 +222,11 @@ input[type=submit]{
 @media (max-width: 576px) {
   .form-row{
     flex-direction: column;
+  }
+
+
+  .form-col{
+    margin: 0;
   }
 }
 

@@ -462,7 +462,6 @@ a {
 
 @media (max-width: 576px) {
   
-  
   html{
     font-size: 50% !important;
   }

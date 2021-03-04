@@ -280,6 +280,7 @@ export default {
   margin: 50px;
   border-radius: 10px;
   max-width: 350px;
+  max-height: 40vh;
 }
 
 @media (max-width: 576px) {

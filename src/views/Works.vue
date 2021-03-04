@@ -165,7 +165,9 @@ export default {
   position: absolute;
   top: -60px;
   width: 100%;
-  font-size: 14px;
+  font-size: var(--font-size-15);
+  padding-inline-start: 0;
+  flex-wrap: wrap;
 }
 
 .cat-filter {
@@ -187,5 +189,17 @@ export default {
   display: none;
 }
 
+
+@media (max-width: 576px) {
+
+  .work-filter{
+    position: initial;
+  }
+
+  .work-filter a{
+    color: #000;
+  }
+
+}
 
 </style>
