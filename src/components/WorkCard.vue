@@ -10,8 +10,8 @@
       }"
       class="work-card"
     >
-      <img
-        :src="'/works/' + work.slug + '.jpg'"
+      <ImageItem
+        :source="'/works/' + work.slug + '.jpg'"
         :alt="'Photo d\'illustration ' + work.title"
       />
       <div class="work-overlay">
@@ -30,11 +30,16 @@
 </template>
 
 <script>
+import ImageItem from '@/components/ImageItem';
+
 export default {
   name: "WorkCard",
   props: {
     work: Object
   },
+  components: {
+    ImageItem
+  }
 
 };
 </script>

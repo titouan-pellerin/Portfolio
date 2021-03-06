@@ -91,6 +91,22 @@ export default {
       document.querySelector(".menu-btn").checked = false;
       document.querySelector(".nav").classList.remove("expanded");
     },
+    fetchWork() {
+      fetch("/works/works.json")
+        .then((response) => response.json())
+        .then((data) => {
+          data.sort(function (a, b) {
+            let dateA = new Date(a.date);
+            let dateB = new Date(b.date);
+            return dateB - dateA;
+          });
+          this.works = data;
+          localStorage.works = JSON.stringify(data);
+        });
+    },
+  },
+  created(){
+    this.fetchWork();
   },
   mounted() {
     window.addEventListener("scroll", this.scrollFunction);
@@ -367,7 +383,7 @@ a {
 }
 
 .box-shadow {
-  box-shadow: 0px 30px 60px -30px rgb(0 0 0 / 45%);
+  box-shadow: 0px 20px 50px -30px rgb(0 0 0 / 45%);
 }
 
 .main-footer {

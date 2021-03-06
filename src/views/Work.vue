@@ -19,31 +19,48 @@
         ><i class="fas fa-arrow-down"></i
       ></a>
     </header>
-    <Gallery
-      v-if="workArray.gallery"
-      :images="workArray.gallery.images"
-    ></Gallery>
+    <main class="margin-bottom-1x">
+      <section class="videos margin-top-1x" v-if="workArray.video">
+        <Video
+          v-for="video in workArray.video"
+          :key="video.url"
+          :url="video.url"
+          :title="video.title"
+        ></Video>
+      </section>
+      <section class="galleries margin-top-1x" v-if="workArray.gallery">
+        <Gallery
+          v-for="gallery in workArray.gallery"
+          :key="gallery.slug"
+          :slug="workArray.slug"
+          :gallerySlug="gallery.slug"
+          :size="gallery.size"
+          :title="gallery.title"
+        ></Gallery>
+      </section>
+    </main>
   </div>
 </template>
 
 <script>
 import UnderlinedTitle from "@/components/UnderlinedTitle.vue";
 import Gallery from "@/components/Gallery.vue";
+import Video from "@/components/Video.vue";
 
 export default {
-  name: "Home",
+  name: "Work",
   props: {
-    work: {},
+    work: String,
   },
   components: {
     UnderlinedTitle,
     Gallery,
+    Video,
   },
   data: function () {
-    let workArray = JSON.parse(this.work);
     return {
-      workArray: workArray,
-      Date: new Date(workArray.date),
+      workArray: Array,
+      Date: Date,
     };
   },
   computed: {
@@ -57,6 +74,24 @@ export default {
         this.Date.getFullYear()
       );
     },
+  },
+  watch: {
+    $route: "fetchWork",
+  },
+  methods: {
+    fetchWork() {
+      if (!this.work) {
+        JSON.parse(localStorage.works).forEach((work) => {
+          if (work.slug == this.$route.params.slug) {
+            this.workArray = work;
+          }
+        });
+      } else this.workArray = JSON.parse(this.work);
+    },
+  },
+  created() {
+    this.fetchWork();
+    this.Date = new Date(this.workArray.date);
   },
 };
 </script>

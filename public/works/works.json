@@ -220,7 +220,13 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Les photos",
+                "slug": "bijoux-de-verre",
+                "size": 30
+            }
+        ]
     },
     {
         "id": 19,
@@ -272,7 +278,23 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "content": "Test content"
+        "video": [
+            {
+                "title": "Le teaser",
+                "url": "https://youtube.com/embed/9kLk7do7oCE"
+            },
+            {
+                "title": "Le reportage vidéo",
+                "url": "https://youtube.com/embed/9kLk7do7oCE"
+            }
+        ],
+        "gallery": [
+            {
+                "title": "Quelques photos",
+                "slug": "mordelles-metiers-dart-2019",
+                "size": 42
+            }
+        ]
     },
     {
         "id": 23,
@@ -283,7 +305,18 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Hervé",
+                "slug": "herve",
+                "size": 20
+            },
+            {
+                "title": "Eddy de Pretto",
+                "slug": "eddy-de-pretto",
+                "size": 14
+            }
+        ]
     },
     {
         "id": 24,
@@ -294,7 +327,13 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Les photos",
+                "slug": "toure-kunda",
+                "size": 36
+            }
+        ]
     },
     {
         "id": 25,
@@ -305,7 +344,23 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Moka Boka",
+                "slug": "moka-boka",
+                "size": 9
+            },
+            {
+                "title": "Lord Esperanza",
+                "slug": "lord-esperanza",
+                "size": 22
+            },
+            {
+                "title": "Kikesa",
+                "slug": "kikesa",
+                "size": 15
+            }
+        ]
     },
     {
         "id": 26,
@@ -317,7 +372,19 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "content": "Test content"
+        "video": [
+            {
+                "title": "Aftermovie",
+                "url": "https://www.youtube.com/embed/lb4HjvRZwGY"
+            }
+        ],
+        "gallery": [
+            {
+                "title": "Quelques photos",
+                "slug": "ouverture-festival-urbaines",
+                "size": 26
+            }
+        ]
     },
     {
         "id": 27,
@@ -328,7 +395,18 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Yoann Minkoff & Kris Nolly",
+                "slug": "yoann-minkoff-kris-nolly",
+                "size": 18
+            },
+            {
+                "title": "Interzone",
+                "slug": "interzone",
+                "size": 23
+            }
+        ]
     },
     {
         "id": 28,
@@ -339,7 +417,13 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Les photos",
+                "slug": "ile-de-groix",
+                "size": 26
+            }
+        ]
     },
     {
         "id": 29,
@@ -351,7 +435,19 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Quelques photos",
+                "slug": "reportage-cap-plus",
+                "size": 15
+            }
+        ],
+        "video": [
+            {
+                "title": "Le reportage vidéo",
+                "url": "https://www.youtube.com/embed/YnrKeJ-g4oQ"
+            }
+        ]
     },
     {
         "id": 30,
@@ -362,7 +458,13 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Les photos",
+                "slug": "ile-o-barolosolo",
+                "size": 21
+            }
+        ]
     },
     {
         "id": 31,
@@ -373,7 +475,28 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Shut Up Twist Again!",
+                "slug": "shut-up-twist-again",
+                "size": 5
+            },
+            {
+                "title": "Not Scientists",
+                "slug": "not-scientists",
+                "size": 10
+            },
+            {
+                "title": "Justin(e)",
+                "slug": "justine",
+                "size": 6
+            },
+            {
+                "title": "The Decline!",
+                "slug": "the-decline",
+                "size": 6
+            }
+        ]
     },
     {
         "id": 32,
@@ -384,7 +507,18 @@
         "categories": [
             "Audiovisuel"
         ],
-        "content": "Test content"
+        "gallery": [
+            {
+                "title": "Otzeki",
+                "slug": "otzeki",
+                "size": 10
+            },
+            {
+                "title": "Her",
+                "slug": "her",
+                "size": 46
+            }
+        ]
     },
     {
         "id": 33,
@@ -395,26 +529,12 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": {
-            "title": "Les photos",
-            "images": [
-                {
-                    "url": "/works/affiches-triomphe.jpg",
-                    "title": "Affiches Triomphe"
-                },
-                {
-                    "url": "/works/affiches-triomphe.jpg",
-                    "title": "Affiches Triomphe"
-                },
-                {
-                    "url": "/works/affiches-triomphe.jpg",
-                    "title": "Affiches Triomphe"
-                },
-                {
-                    "url": "/works/affiches-triomphe.jpg",
-                    "title": "Affiches Triomphe"
-                }
-            ]
-        }
+        "gallery": [
+            {
+                "title": "Les photos",
+                "slug": "voyage-au-groenland",
+                "size": 36
+            }
+        ]
     }
 ]

@@ -136,23 +136,8 @@ export default {
       works: ''
     };
   },
-  methods: {
-    fetchWork() {
-      fetch("/works/works.json")
-        .then((response) => response.json())
-        .then((data) => {
-          data.sort(function (a, b) {
-            let dateA = new Date(a.date);
-            let dateB = new Date(b.date);
-            return dateB - dateA;
-          });
-          this.works = data;
-          localStorage.works = JSON.stringify(data);
-        });
-    },
-  },
   created() {
-    this.fetchWork();
+    this.works = JSON.parse(localStorage.works);
   },
 };
 </script>
