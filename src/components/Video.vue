@@ -1,10 +1,10 @@
 <template>
-  <UnderlinedTitle class="video-title" size="h2" :content="title" />
+  <UnderlinedTitle class="video-title" size="h2" :content="params.title" />
   <div class="video-container margin-top-1x">
     <iframe
       
       height="100%"
-      :src="url"
+      :src="params.url"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
@@ -19,8 +19,7 @@ import UnderlinedTitle from '@/components/UnderlinedTitle.vue';
 export default {
   name: "Video",
   props: {
-    url: String,
-    title: String,
+    params: Object,
   },
   components: {
     UnderlinedTitle

@@ -220,10 +220,11 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Les photos",
-                "slug": "bijoux-de-verre",
+                "gallerySlug": "bijoux-de-verre",
                 "size": 30
             }
         ]
@@ -266,7 +267,29 @@
             "Développement",
             "Design"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Video",
+                "title": "Démonstration",
+                "url": "https://youtube.com/embed/lueeukDReeg"
+            },
+            {
+                "type": "p",
+                "text": "Le principe de l'application est assez simple. L'utilisateur ajoute ses plantes. Il renseigne une photo, un nom, un degré de gel et indique si sa plante est déplaçable ou non. Ensuite il localise l'emplacement de ses plantes sur une carte. Et finalement, avec toutes ses indications, l'application indique à l'utilisateur si ses plantes risquent de geler en récupérant les prévisions météorologiques du lieu indiqué."
+            },
+            {
+                "type": "ButtonIcon",
+                "content": "Mon CV",
+                "icon": "fa-external-link-alt",
+                "external": true,
+                "url": "https://github.com/titouan-pellerin/Protege-ton-jardin"
+            },
+            {
+                "type": "UnderlinedTitle",
+                "size": "h2",
+                "content": "Test"
+            }
+        ]
     },
     {
         "id": 22,
@@ -278,20 +301,21 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "video": [
+        "content": [
             {
+                "type": "Video",
                 "title": "Le teaser",
                 "url": "https://youtube.com/embed/9kLk7do7oCE"
             },
             {
+                "type": "Video",
                 "title": "Le reportage vidéo",
                 "url": "https://youtube.com/embed/9kLk7do7oCE"
-            }
-        ],
-        "gallery": [
+            },
             {
+                "type": "Gallery",
                 "title": "Quelques photos",
-                "slug": "mordelles-metiers-dart-2019",
+                "gallerySlug": "mordelles-metiers-dart-2019",
                 "size": 42
             }
         ]
@@ -305,15 +329,17 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Hervé",
-                "slug": "herve",
+                "gallerySlug": "herve",
                 "size": 20
             },
             {
+                "type": "Gallery",
                 "title": "Eddy de Pretto",
-                "slug": "eddy-de-pretto",
+                "gallerySlug": "eddy-de-pretto",
                 "size": 14
             }
         ]
@@ -327,10 +353,11 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Les photos",
-                "slug": "toure-kunda",
+                "gallerySlug": "toure-kunda",
                 "size": 36
             }
         ]
@@ -344,20 +371,23 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Moka Boka",
-                "slug": "moka-boka",
+                "gallerySlug": "moka-boka",
                 "size": 9
             },
             {
+                "type": "Gallery",
                 "title": "Lord Esperanza",
-                "slug": "lord-esperanza",
+                "gallerySlug": "lord-esperanza",
                 "size": 22
             },
             {
+                "type": "Gallery",
                 "title": "Kikesa",
-                "slug": "kikesa",
+                "gallerySlug": "kikesa",
                 "size": 15
             }
         ]
@@ -372,16 +402,16 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "video": [
+        "content": [
             {
+                "type": "Video",
                 "title": "Aftermovie",
                 "url": "https://www.youtube.com/embed/lb4HjvRZwGY"
-            }
-        ],
-        "gallery": [
+            },
             {
+                "type": "Gallery",
                 "title": "Quelques photos",
-                "slug": "ouverture-festival-urbaines",
+                "gallerySlug": "ouverture-festival-urbaines",
                 "size": 26
             }
         ]
@@ -395,15 +425,17 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Yoann Minkoff & Kris Nolly",
-                "slug": "yoann-minkoff-kris-nolly",
+                "gallerySlug": "yoann-minkoff-kris-nolly",
                 "size": 18
             },
             {
+                "type": "Gallery",
                 "title": "Interzone",
-                "slug": "interzone",
+                "gallerySlug": "interzone",
                 "size": 23
             }
         ]
@@ -417,10 +449,11 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Les photos",
-                "slug": "ile-de-groix",
+                "gallerySlug": "ile-de-groix",
                 "size": 26
             }
         ]
@@ -435,17 +468,17 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "gallery": [
+        "content": [
             {
-                "title": "Quelques photos",
-                "slug": "reportage-cap-plus",
-                "size": 15
-            }
-        ],
-        "video": [
-            {
+                "type": "Video",
                 "title": "Le reportage vidéo",
                 "url": "https://www.youtube.com/embed/YnrKeJ-g4oQ"
+            },
+            {
+                "type": "Gallery",
+                "title": "Quelques photos",
+                "gallerySlug": "reportage-cap-plus",
+                "size": 15
             }
         ]
     },
@@ -458,10 +491,11 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Les photos",
-                "slug": "ile-o-barolosolo",
+                "gallerySlug": "ile-o-barolosolo",
                 "size": 21
             }
         ]
@@ -475,25 +509,29 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Shut Up Twist Again!",
-                "slug": "shut-up-twist-again",
+                "gallerySlug": "shut-up-twist-again",
                 "size": 5
             },
             {
+                "type": "Gallery",
                 "title": "Not Scientists",
-                "slug": "not-scientists",
+                "gallerySlug": "not-scientists",
                 "size": 10
             },
             {
+                "type": "Gallery",
                 "title": "Justin(e)",
-                "slug": "justine",
+                "gallerySlug": "justine",
                 "size": 6
             },
             {
+                "type": "Gallery",
                 "title": "The Decline!",
-                "slug": "the-decline",
+                "gallerySlug": "the-decline",
                 "size": 6
             }
         ]
@@ -507,15 +545,17 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Otzeki",
-                "slug": "otzeki",
+                "gallerySlug": "otzeki",
                 "size": 10
             },
             {
+                "type": "Gallery",
                 "title": "Her",
-                "slug": "her",
+                "gallerySlug": "her",
                 "size": 46
             }
         ]
@@ -529,10 +569,11 @@
         "categories": [
             "Audiovisuel"
         ],
-        "gallery": [
+        "content": [
             {
+                "type": "Gallery",
                 "title": "Les photos",
-                "slug": "voyage-au-groenland",
+                "gallerySlug": "voyage-au-groenland",
                 "size": 36
             }
         ]

@@ -5,7 +5,6 @@
       <div class="header-layer"></div>
       <div class="header-content">
         <UnderlinedTitle
-          class="header-title"
           size="h1"
           :content="workArray.title"
         />
@@ -20,23 +19,16 @@
       ></a>
     </header>
     <main class="margin-bottom-1x">
-      <section class="videos margin-top-1x" v-if="workArray.video">
-        <Video
-          v-for="video in workArray.video"
-          :key="video.url"
-          :url="video.url"
-          :title="video.title"
-        ></Video>
-      </section>
-      <section class="galleries margin-top-1x" v-if="workArray.gallery">
-        <Gallery
-          v-for="gallery in workArray.gallery"
-          :key="gallery.slug"
-          :slug="workArray.slug"
-          :gallerySlug="gallery.slug"
-          :size="gallery.size"
-          :title="gallery.title"
-        ></Gallery>
+      <section
+        v-for="content in workArray.content"
+        :key="content.type"
+        class="margin-top-1x"
+        :class="content.type"
+      >
+        <component
+          :is="content.type"
+          :params="content"
+        >{{content.text}}</component>
       </section>
     </main>
   </div>
@@ -46,6 +38,7 @@
 import UnderlinedTitle from "@/components/UnderlinedTitle.vue";
 import Gallery from "@/components/Gallery.vue";
 import Video from "@/components/Video.vue";
+import ButtonIcon from "@/components/ButtonIcon.vue";
 
 export default {
   name: "Work",
@@ -56,6 +49,7 @@ export default {
     UnderlinedTitle,
     Gallery,
     Video,
+    ButtonIcon
   },
   data: function () {
     return {
@@ -153,5 +147,9 @@ export default {
 .work-date {
   text-transform: capitalize;
   margin-right: 20px;
+}
+
+.title-wrapper{
+  font-size: var(--font-size-40);
 }
 </style>

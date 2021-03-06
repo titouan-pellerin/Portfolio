@@ -1,9 +1,9 @@
 <template>
-  <UnderlinedTitle class="gallery-title" size="h2" :content="title" />
+  <UnderlinedTitle class="gallery-title" size="h2" :content="params.title" />
   <div class="grid-container margin-top-1x">
     <div class="gallery-grid">
       <a
-        v-for="n in size"
+        v-for="n in params.size"
         :key="n"
         class="gallery-item box-shadow"
         @click="
@@ -15,18 +15,18 @@
           <h3></h3>
           <i class="fas fa-plus"></i>
         </div>
-        <ImageItem :source="`/works/${slug}/${gallerySlug}-${n}.jpg`" />
+        <ImageItem :source="`/works/${$route.params.slug}/${params.gallerySlug}-${n}.jpg`" />
       </a>
     </div>
   </div>
 
-  <div :id="gallerySlug" class="gallery-modal">
+  <div :id="params.gallerySlug" class="gallery-modal">
     <a class="close-modal" @click="toggleModal()">×</a>
     <div class="modal-content">
-      <div class="slide" v-for="n in size" :key="n">
+      <div class="slide" v-for="n in params.size" :key="n">
         <ImageItem
           class="slide-img"
-          :source="`/works/${slug}/${gallerySlug}-${n}.jpg`"
+          :source="`/works/${$route.params.slug}/${params.gallerySlug}-${n}.jpg`"
         />
       </div>
     </div>
@@ -42,10 +42,10 @@ import ImageItem from "@/components/ImageItem.vue";
 export default {
   name: "Gallery",
   props: {
-    title: String,
-    size: Number,
-    slug: String,
+    params: Object,
     gallerySlug: String,
+    title: String,
+    size: Number
   },
   components: {
     UnderlinedTitle,
@@ -54,23 +54,23 @@ export default {
   methods: {
     toggleModal() {
       document
-        .querySelector(`#${this.gallerySlug}.gallery-modal`)
+        .querySelector(`#${this.params.gallerySlug}.gallery-modal`)
         .classList.toggle("open");
     },
     currentSlide(index) {
       let modalContent = document.querySelector(
-        `#${this.gallerySlug} .modal-content`
+        `#${this.params.gallerySlug} .modal-content`
       );
       modalContent.style.transform = `translateX(-${index - 1}00%)`;
       modalContent.dataset.transform = `${index - 1}00`;
     },
     plusSlides(direction) {
       let modalContent = document.querySelector(
-        `#${this.gallerySlug} .modal-content`
+        `#${this.params.gallerySlug} .modal-content`
       );
       let currentTransform = parseInt(modalContent.dataset.transform);
       let newTransform = parseInt(currentTransform) + parseInt(direction);
-      let size = document.querySelectorAll(`#${this.gallerySlug} .slide`).length;
+      let size = document.querySelectorAll(`#${this.params.gallerySlug} .slide`).length;
       if (
         (currentTransform >= 0 &&
           currentTransform < (size - 1) * 100 &&
@@ -86,7 +86,7 @@ export default {
     keyNav(e) {
       if (
         document
-          .querySelector(`#${this.gallerySlug}.gallery-modal`)
+          .querySelector(`#${this.params.gallerySlug}.gallery-modal`)
           .classList.contains("open") &&
         !e.repeat
       ) {
@@ -105,6 +105,7 @@ export default {
     },
   },
   mounted() {
+    console.log(this.$route.params.slug);
     document.addEventListener("keydown", this.keyNav);
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="title-wrapper">
- <component :is="size" class="underlined-title">
-    {{ content }}
+ <component :is="size || params.size" class="underlined-title">
+    {{ content || params.content }}
   </component>
   </div>
 </template>
@@ -11,7 +11,8 @@ export default {
   name: 'UnderlinedTitle',
   props: {
     size: String,
-    content: String
+    content: String,
+    params: Object,
   }
 }
 </script>
