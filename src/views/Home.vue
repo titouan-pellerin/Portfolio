@@ -22,6 +22,7 @@
           content="Mon CV"
           icon="fa-external-link-alt"
           url=""
+          :external="true"
           class="header-button"
         ></ButtonIcon>
         <div class="header-socials">

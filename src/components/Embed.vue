@@ -1,6 +1,6 @@
 <template>
-  <UnderlinedTitle class="video-title" size="h2" :content="params.title" />
-  <div class="video-container margin-top-1x">
+  <UnderlinedTitle class="embed-title" size="h2" :content="params.title" />
+  <div class="embed-container margin-top-1x">
     <iframe
       
       height="100%"
@@ -17,7 +17,7 @@
 import UnderlinedTitle from '@/components/UnderlinedTitle.vue';
 
 export default {
-  name: "Video",
+  name: "Embed",
   props: {
     params: Object,
   },
@@ -28,11 +28,11 @@ export default {
 </script>
 
 <style>
-.video-title {
+.embed-title {
   font-size: var(--font-size-40);
 }
 
-.video-container{
+.embed-container{
   margin-left: auto;
   margin-right: auto;
   max-width: 1100px;
@@ -40,7 +40,7 @@ export default {
 
 }
 
-.video-container iframe{
+.embed-container iframe{
   width: 100%;
   border-radius: 10px;
 }

@@ -6,13 +6,14 @@
         v-for="n in params.size"
         :key="n"
         class="gallery-item box-shadow"
+        :style="'height: '+params.customHeight"
         @click="
           toggleModal();
           currentSlide(n);
         "
       >
         <div class="item-overlay style-dark">
-          <h3></h3>
+          <h3 v-if="params.imagesTitles">{{params.imagesTitles[n-1]}}</h3>
           <i class="fas fa-plus"></i>
         </div>
         <ImageItem :source="`/works/${$route.params.slug}/${params.gallerySlug}-${n}.jpg`" />
@@ -45,7 +46,9 @@ export default {
     params: Object,
     gallerySlug: String,
     title: String,
-    size: Number
+    size: Number,
+    imagesTitles: Object,
+    customHeight: String
   },
   components: {
     UnderlinedTitle,
@@ -105,7 +108,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.$route.params.slug);
     document.addEventListener("keydown", this.keyNav);
   },
 };
@@ -119,7 +121,7 @@ export default {
 .grid-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 1500px;
 }
 
 .gallery-grid {
@@ -145,7 +147,7 @@ export default {
   max-height: 100%;
   object-fit: cover;
   transform: scale(1);
-  transition: transform ease-in-out 0.3s;
+  transition: transform ease-in-out .3s;
 }
 
 .item-overlay {
@@ -201,7 +203,7 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  transition: transform ease-in-out 0.3s;
+  transition: transform ease-in-out .5s;
   padding: 100px 0;
   box-sizing: border-box;
 }

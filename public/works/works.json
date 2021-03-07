@@ -56,7 +56,13 @@
         "categories": [
             "Design"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Embed",
+                "title": "Plaquette finale",
+                "url": "https://v.calameo.com/?bkcode=006604216e1875fd11eaf&mode=mini&authid=zIFPdUz8ngVz"
+            }
+        ]
     },
     {
         "id": 6,
@@ -68,7 +74,14 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Quelques photos",
+                "size": 13,
+                "gallerySlug": "concert-cali"
+            }
+        ]
     },
     {
         "id": 7,
@@ -82,7 +95,26 @@
             "WordPress",
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Le logo",
+                "size": 1,
+                "gallerySlug": "pikto-video-logo"
+            },
+            {
+                "type": "Embed",
+                "title": "Maquettes",
+                "url": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fcvmjf0NiwuLHhJtgt0xXVX%2FMaquettes%3Fnode-id%3D0%253A1"
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Visiter le site",
+                "icon": "fa-external-link-alt",
+                "url": "https://piktovideo.com/",
+                "external": true
+            }
+        ]
     },
     {
         "id": 8,
@@ -95,7 +127,34 @@
             "Design",
             "MMI"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "size": 3,
+                "gallerySlug": "je-viens-dailleurs",
+                "imagesTitles": [
+                    "Accueil",
+                    "Article",
+                    "Annonce",
+                    "Messagerie"
+                ]
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Visiter le site",
+                "icon": "fa-external-link-alt",
+                "url": "https://jeivensdailleurs.fr/",
+                "external": true
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Dépôt Github",
+                "icon": "fa-external-link-alt",
+                "url": "https://github.com/titouan-pellerin/Je-viens-d-ailleurs",
+                "external": true
+            }
+        ]
     },
     {
         "id": 9,
@@ -108,7 +167,27 @@
             "Design",
             "MMI"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "size": 3,
+                "gallerySlug": "portfolio-mmi",
+                "imagesTitles": [
+                    "Accueil",
+                    "À propos",
+                    "Créations"
+                ],
+                "customHeight":"50vh"
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Visiter le site",
+                "icon": "fa-external-link-alt",
+                "url": "https://projets.titouanpellerin.info/portfolio/",
+                "external": true
+            }
+        ]
     },
     {
         "id": 10,
@@ -132,7 +211,33 @@
             "Design",
             "WordPress"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "size": 3,
+                "gallerySlug": "sites-amocas",
+                "imagesTitles": [
+                    "Portail Amocas",
+                    "Les Ateliers de l'Amocas",
+                    "Page Atelier"
+                ]
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Portail Amocas",
+                "icon": "fa-external-link-alt",
+                "url": "https://amocas.fr/",
+                "external": true
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Les Ateliers de l'Amocas",
+                "icon": "fa-external-link-alt",
+                "url": "https://ateliers.amocas.fr/",
+                "external": true
+            }
+        ]
     },
     {
         "id": 12,
@@ -144,7 +249,31 @@
             "Design",
             "MMI"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "UnderlinedTitle",
+                "content": "Ma démarche",
+                "size": "h2"
+            },
+            {
+                "type": "p",
+                "text": "En réalisant ce logo et cette charte graphique, j’ai centré mes recherches sur le numérique tout en essayant de conserver un aspect ludique, sans être trop enfantin. Je voulais garder le côté \"Serious\". Les liaisons que l’on observe en blanc sur le logo peuvent faire référence, à la fois aux circuits imprimés que l’on retrouve sur les composants informatiques, mais surtout à la notion d’échange ou de partage qui caractérise une \"Society\". Le résultat : un logo simple et actuel qui correspond bien aux valeurs de la \"Serious Games Society\"."
+            },
+            {
+                "type": "Gallery",
+                "title": "Logo final",
+                "size": 2,
+                "gallerySlug": "charte-graphique-sgs",
+                "imagesTitles": [
+                    "Version dark",
+                    "Version light"
+                ]
+            },
+            {
+                "type": "p",
+                "text": "La Serious Games Society a sélectionné mon logo parmi une trentaine d'autres logos."
+            }
+        ]
     },
     {
         "id": 13,
@@ -158,7 +287,27 @@
             "WordPress",
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "size": 3,
+                "gallerySlug": "site-visufo",
+                "imagesTitles": [
+                    "Page d'accueil",
+                    "Galerie de projet",
+                    "Pied de page"
+                ],
+                "customHeight": "50vh"
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Visiter le site",
+                "icon": "fa-external-link-alt",
+                "url": "https://visufo.fr/",
+                "external": true
+            }
+        ]
     },
     {
         "id": 14,
@@ -170,7 +319,13 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Embed",
+                "title": "Aftermovie",
+                "url": "https://youtube.com/embed/PcD3UsA2gSs"
+            }
+        ]
     },
     {
         "id": 15,
@@ -183,7 +338,15 @@
             "Audiovisuel",
             "MMI"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "L'affiche",
+                "size": 1,
+                "gallerySlug": "sequence-dimages",
+                "customHeight": "50vh"
+            }
+        ]
     },
     {
         "id": 16,
@@ -196,7 +359,15 @@
             "Audiovisuel",
             "MMI"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "L'affiche",
+                "size": 1,
+                "gallerySlug": "gorgee-de-trop",
+                "customHeight": "50vh"
+            }
+        ]
     },
     {
         "id": 17,
@@ -208,7 +379,19 @@
             "Audiovisuel",
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Embed",
+                "title": "Reportage vidéo",
+                "url": "https://youtube.com/embed/dHeeJnid7Go"
+            },
+            {
+                "type": "Gallery",
+                "title": "Quelques photos",
+                "size": 21,
+                "gallerySlug": "cap-plus-8-mois"
+            }
+        ]
     },
     {
         "id": 18,
@@ -241,7 +424,27 @@
             "WordPress",
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "size": 3,
+                "gallerySlug": "mordelles-metiers-dart",
+                "imagesTitles": [
+                    "Accueil",
+                    "Exposants",
+                    "Infos pratiques"
+                ],
+                "customHeight": "50vh"
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Visiter le site",
+                "icon": "fa-external-link-alt",
+                "url": "https://mordelles-metiers-art.fr/",
+                "external": true
+            }
+        ]
     },
     {
         "id": 20,
@@ -255,7 +458,27 @@
             "WordPress",
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "size": 3,
+                "gallerySlug": "lantichambre-mordelles",
+                "imagesTitles": [
+                    "Accueil",
+                    "Programmation",
+                    "Infos pratiques"
+                ],
+                "customHeight": "50vh"
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Visiter le site",
+                "icon": "fa-external-link-alt",
+                "url": "https://lantichambre-mordelles.fr/",
+                "external": true
+            }
+        ]
     },
     {
         "id": 21,
@@ -269,7 +492,7 @@
         ],
         "content": [
             {
-                "type": "Video",
+                "type": "Embed",
                 "title": "Démonstration",
                 "url": "https://youtube.com/embed/lueeukDReeg"
             },
@@ -278,16 +501,35 @@
                 "text": "Le principe de l'application est assez simple. L'utilisateur ajoute ses plantes. Il renseigne une photo, un nom, un degré de gel et indique si sa plante est déplaçable ou non. Ensuite il localise l'emplacement de ses plantes sur une carte. Et finalement, avec toutes ses indications, l'application indique à l'utilisateur si ses plantes risquent de geler en récupérant les prévisions météorologiques du lieu indiqué."
             },
             {
-                "type": "ButtonIcon",
-                "content": "Mon CV",
+                "custom": "ButtonIcon",
+                "content": "Dépôt Github",
                 "icon": "fa-external-link-alt",
-                "external": true,
-                "url": "https://github.com/titouan-pellerin/Protege-ton-jardin"
+                "url": "https://github.com/titouan-pellerin/Protege-ton-jardin",
+                "external": true
             },
             {
-                "type": "UnderlinedTitle",
-                "size": "h2",
-                "content": "Test"
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "gallerySlug": "protege-ton-jardin",
+                "size": 4,
+                "customHeight": "50vh",
+                "imagesTitles": [
+                    "Accueil",
+                    "Menu",
+                    "Nouvelle plante",
+                    "Localisation"
+                ]
+            },
+            {
+                "type": "p",
+                "text": "Sur ce projet, j'ai été aidé par Théo OSTER qui a réalisé toutes les maquettes visuelles ainsi que le logo et les rendus."
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Site de Théo",
+                "icon": "fa-external-link-alt",
+                "url": "https://theooster.fr",
+                "external": true
             }
         ]
     },
@@ -303,12 +545,12 @@
         ],
         "content": [
             {
-                "type": "Video",
+                "type": "Embed",
                 "title": "Le teaser",
                 "url": "https://youtube.com/embed/9kLk7do7oCE"
             },
             {
-                "type": "Video",
+                "type": "Embed",
                 "title": "Le reportage vidéo",
                 "url": "https://youtube.com/embed/9kLk7do7oCE"
             },
@@ -404,7 +646,7 @@
         ],
         "content": [
             {
-                "type": "Video",
+                "type": "Embed",
                 "title": "Aftermovie",
                 "url": "https://www.youtube.com/embed/lb4HjvRZwGY"
             },
@@ -470,7 +712,7 @@
         ],
         "content": [
             {
-                "type": "Video",
+                "type": "Embed",
                 "title": "Le reportage vidéo",
                 "url": "https://www.youtube.com/embed/YnrKeJ-g4oQ"
             },

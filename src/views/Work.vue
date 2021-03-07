@@ -26,9 +26,18 @@
         :class="content.type"
       >
         <component
+          v-if="!content.custom"
           :is="content.type"
           :params="content"
         >{{content.text}}</component>
+
+        <ButtonIcon
+          v-if="content.custom == 'ButtonIcon'"
+          :content="content.content"
+          :icon="content.icon"
+          :url="content.url"
+          :external="content.external">
+        </ButtonIcon>
       </section>
     </main>
   </div>
@@ -37,7 +46,7 @@
 <script>
 import UnderlinedTitle from "@/components/UnderlinedTitle.vue";
 import Gallery from "@/components/Gallery.vue";
-import Video from "@/components/Video.vue";
+import Embed from "@/components/Embed.vue";
 import ButtonIcon from "@/components/ButtonIcon.vue";
 
 export default {
@@ -48,7 +57,7 @@ export default {
   components: {
     UnderlinedTitle,
     Gallery,
-    Video,
+    Embed,
     ButtonIcon
   },
   data: function () {
@@ -152,4 +161,12 @@ export default {
 .title-wrapper{
   font-size: var(--font-size-40);
 }
+
+.work main p{
+  font-size: var(--font-size-15);
+  max-width: 1500px;
+  margin: auto;
+}
+
+
 </style>
