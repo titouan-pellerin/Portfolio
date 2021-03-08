@@ -81,7 +81,7 @@ export default {
   font-size: var(--font-size-60);
 }
 
-.not-found .btn{
+.not-found .btn-wrapper{
   margin-top: 20px;
 }
 

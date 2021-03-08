@@ -21,7 +21,7 @@
         <ButtonIcon
           content="Mon CV"
           icon="fa-external-link-alt"
-          url=""
+          url="/CV.pdf"
           :external="true"
           class="header-button"
         ></ButtonIcon>
@@ -49,7 +49,7 @@
         <div class="works-container">
           <div class="works">
             <WorkCard
-              v-for="work in works.slice(0,6)"
+              v-for="work in works.slice(0, 6)"
               :key="work.title"
               :work="work"
               :data-id="work.id"
@@ -57,6 +57,7 @@
           </div>
         </div>
         <ButtonIcon
+          id="about"
           content="Toutes mes créations"
           icon="fa-arrow-right"
           url="/works"
@@ -64,12 +65,16 @@
         ></ButtonIcon>
       </section>
       <section class="about-section style-light margin-bottom-1x">
-        <UnderlinedTitle class="header-title" size="h1" content="Qui suis-je&nbsp?" />
+        <UnderlinedTitle
+          class="header-title"
+          size="h1"
+          content="Qui suis-je&nbsp?"
+        />
         <p>
           Passionné par l'informatique et l'audiovisuel, j'aime tout ce qui à
           trait au multimédia. Je suis actuellement en deuxième année de DUT
-          Métiers du Multimédia et de l'Internet à Laval et apprenti infographiste
-          aux Écoles militaires de Saint-Cyr Coëtquidan.
+          Métiers du Multimédia et de l'Internet à Laval et apprenti
+          infographiste aux Écoles militaires de Saint-Cyr Coëtquidan.
         </p>
         <div class="skills-wrapper">
           <div class="left-skills">
@@ -109,7 +114,7 @@
         <ButtonIcon
           content="Mon CV"
           icon="fa-external-link-alt"
-          url=""
+          url="/CV.pdf"
           class="skills-button"
         ></ButtonIcon>
       </section>
@@ -134,10 +139,19 @@ export default {
     WorkCard,
     IconBox,
   },
+  title: "Portfolio - Titouan Pellerin",
   data: function () {
     return {
-      works: ''
+      works: "",
     };
+  },
+  methods: {
+    scrollFix(hashbang) {
+      if (hashbang.includes("#")) location.href = hashbang;
+    },
+  },
+  mounted() {
+    setTimeout(() => this.scrollFix(this.$route.hash), 1);
   },
   created() {
     this.works = JSON.parse(localStorage.works);
@@ -179,10 +193,9 @@ export default {
   max-height: 100vh;
   padding: 120px 50px;
   box-sizing: border-box;
-
 }
 
-.header-title  {
+.header-title {
   text-align: center;
   font-size: var(--font-size-60);
 }
@@ -199,7 +212,6 @@ export default {
 .header-button {
   margin-bottom: 20px;
 }
-
 
 .works-container {
   background: linear-gradient(#141618 80%, transparent 20%);
@@ -272,7 +284,7 @@ export default {
     font-size: var(--font-size-40) !important;
   }
 
-  .skills-portrait{
+  .skills-portrait {
     max-width: 100%;
   }
 }
@@ -281,11 +293,11 @@ export default {
 }
 
 @media (max-width: 992px) {
-  .skills-wrapper{
+  .skills-wrapper {
     flex-direction: column;
   }
 
-  .icon-box{
+  .icon-box {
     text-align: center;
     align-items: center;
   }

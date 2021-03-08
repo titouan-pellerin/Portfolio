@@ -20,7 +20,7 @@
       <router-link @click.prevent="menuLink('/')" class="menu-logo" to="/"
         ><img alt="Logo Titouan" src="./assets/logo.svg"
       /></router-link>
-      <router-link @click.prevent="menuLink('/#about')" to="/#about">À propos</router-link>
+      <router-link @click.prevent="menuLink('/#about')" to="/#about" class="about-menu">À propos</router-link>
       <router-link @click.prevent="menuLink('/contact')" to="/contact">Contact</router-link>
       <a class="btn visufo-cta" href="https://visufo.fr" target="_blank"
         >Visufo</a
@@ -103,7 +103,7 @@ export default {
           this.works = data;
           localStorage.works = JSON.stringify(data);
         });
-    },
+    }
   },
   created(){
     this.fetchWork();
@@ -259,7 +259,7 @@ a {
   margin: 0 20px;
 }
 
-.nav a.router-link-exact-active {
+.nav a.router-link-exact-active:not(.about-menu) {
   color: #439efe;
 }
 

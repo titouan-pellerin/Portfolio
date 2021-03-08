@@ -51,6 +51,7 @@ export default {
     UnderlinedTitle,
     WorkCard,
   },
+  title: "Créations - Titouan Pellerin",
   data: function () {
     return {
       works: "",

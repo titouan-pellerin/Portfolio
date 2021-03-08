@@ -4,10 +4,7 @@
       <div class="header-bg-wrapper" :style="headerBg"></div>
       <div class="header-layer"></div>
       <div class="header-content">
-        <UnderlinedTitle
-          size="h1"
-          :content="workArray.title"
-        />
+        <UnderlinedTitle size="h1" :content="workArray.title" />
         <p class="header-caption">{{ workArray.caption }}</p>
         <div class="work-info">
           <p class="work-date">{{ getDate }}</p>
@@ -29,14 +26,16 @@
           v-if="!content.custom"
           :is="content.type"
           :params="content"
-        >{{content.text}}</component>
+          >{{ content.text }}</component
+        >
 
         <ButtonIcon
           v-if="content.custom == 'ButtonIcon'"
           :content="content.content"
           :icon="content.icon"
           :url="content.url"
-          :external="content.external">
+          :external="content.external"
+        >
         </ButtonIcon>
       </section>
     </main>
@@ -58,8 +57,9 @@ export default {
     UnderlinedTitle,
     Gallery,
     Embed,
-    ButtonIcon
+    ButtonIcon,
   },
+  title: `Titouan Pellerin`,
   data: function () {
     return {
       workArray: Array,
@@ -100,7 +100,7 @@ export default {
 </script>
 
 <style scoped>
-.work .header-content{
+.work .header-content {
   padding: 0 5px;
 }
 
@@ -166,15 +166,15 @@ export default {
   margin: 10px;
 }
 
-header .title-wrapper{
+header .title-wrapper {
   font-size: var(--font-size-40);
 }
 
-main .title-wrapper{
+main .title-wrapper {
   font-size: var(--font-size-30);
 }
 
-.work main p{
+.work main p {
   font-size: var(--font-size-15);
   max-width: 1500px;
   margin: auto;
@@ -182,11 +182,8 @@ main .title-wrapper{
 }
 
 @media (max-width: 576px) {
-  
-  header .title-wrapper{
+  header .title-wrapper {
     font-size: var(--font-size-30);
   }
 }
-
-
 </style>
