@@ -1,5 +1,5 @@
 <template>
-  <img v-lazyload class="image__item" :data-url="source" />
+  <img v-lazyload class="image__item" :data-url="source"/>
 </template>
 
 <script>

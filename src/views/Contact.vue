@@ -60,6 +60,8 @@
         </div>
         
         <input type="submit" class="btn" value="Envoyer" />
+        <img class="loader" src="../assets/images/loader.svg"/>
+        <p class="answer"></p>
       </form>
     </section>
   </div>
@@ -83,6 +85,7 @@ export default {
   methods: {
     submitForm() {
       let form = document.querySelector("form");
+      let answer = document.querySelector('.answer');
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
@@ -95,8 +98,19 @@ export default {
           body: data,
           headers: new Headers(),
         };
-        console.log(data);
-        fetch("http://mail.titouanpellerin.info/", fetchData);
+        answer.textContent = '';
+        form.classList.add('loading');
+        fetch("http://mail.titouanpellerin.info/", fetchData).then(response => {
+          form.classList.remove('loading');
+          if(response.ok){
+            answer.textContent = "Merci pour votre message, il vient d'être envoyé.";
+            answer.classList.add('success');
+            form.reset();
+          }else{
+            answer.textContent = "Une erreur est survenue. Merci de me contacter directement par e-mail.";
+            answer.classList.add('failure');
+          }
+        });
       });
     },
   },
@@ -217,6 +231,24 @@ label.required::after{
 
 input[type=submit]{
   cursor: pointer;
+}
+
+.answer.success{
+  color: green;
+}
+
+.answer.failure{
+  color: red;
+}
+
+.loader{
+  margin-top: 10px;
+  width: 20px;
+  display: none;
+}
+
+.loading .loader{
+  display: block;
 }
 
 @media (max-width: 576px) {
