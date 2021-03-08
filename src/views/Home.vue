@@ -149,13 +149,26 @@ export default {
     scrollFix(hashbang) {
       if (hashbang.includes("#")) location.href = hashbang;
     },
+    fetchWork() {
+      fetch("/works/works.json")
+        .then((response) => response.json())
+        .then((data) => {
+          data.sort(function (a, b) {
+            let dateA = new Date(a.date);
+            let dateB = new Date(b.date);
+            return dateB - dateA;
+          });
+          this.works = data;
+          localStorage.works = JSON.stringify(data);
+        });
+    }
   },
   mounted() {
     setTimeout(() => this.scrollFix(this.$route.hash), 1);
   },
-  created() {
-    this.works = JSON.parse(localStorage.works);
-  },
+  beforeRouteEnter(to, from,next) {
+    next(vm => vm.fetchWork());
+  }
 };
 </script>
 
