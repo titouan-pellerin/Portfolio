@@ -11,7 +11,7 @@
         <p class="header-caption">{{ workArray.caption }}</p>
         <div class="work-info">
           <p class="work-date">{{ getDate }}</p>
-          <p class="work-categories">{{ workArray.categories.join(", ") }}</p>
+          <p class="categories">{{ workArray.categories.join(", ") }}</p>
         </div>
       </div>
       <a class="scroll-down" id="works" href="#works"
@@ -100,6 +100,10 @@ export default {
 </script>
 
 <style scoped>
+.work .header-content{
+  padding: 0 5px;
+}
+
 .work header {
   position: relative;
   height: 100vh;
@@ -133,7 +137,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  padding: 0 20%;
 }
 
 .header-title {
@@ -151,6 +154,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   font-weight: 500;
+  justify-content: center;
 }
 
 .work-date {
@@ -158,14 +162,30 @@ export default {
   margin-right: 20px;
 }
 
-.title-wrapper{
+.work-info p {
+  margin: 10px;
+}
+
+header .title-wrapper{
   font-size: var(--font-size-40);
+}
+
+main .title-wrapper{
+  font-size: var(--font-size-30);
 }
 
 .work main p{
   font-size: var(--font-size-15);
   max-width: 1500px;
   margin: auto;
+  padding: 0 5px;
+}
+
+@media (max-width: 576px) {
+  
+  header .title-wrapper{
+    font-size: var(--font-size-30);
+  }
 }
 
 

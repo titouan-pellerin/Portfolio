@@ -103,6 +103,14 @@ export default {
   margin: 0;
 }
 
+.work-categories{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
 @media (max-width: 576px) {
   .work-card {
     min-width: 100%;

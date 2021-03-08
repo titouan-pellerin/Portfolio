@@ -352,15 +352,12 @@ a {
 
 .category {
   padding: 5px 12px;
+  margin: 3px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--font-size-15);
   text-transform: uppercase;
   border-radius: 25px;
   border: 2px solid rgba(255, 255, 255, 0.473);
-}
-
-.category:not(:last-child) {
-  margin-right: 5px;
 }
 
 .margin-bottom-1x {

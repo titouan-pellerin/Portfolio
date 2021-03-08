@@ -44,74 +44,76 @@
         ></a>
       </div>
     </header>
-    <section class="margin-bottom-2x">
-      <div class="works-container">
-        <div class="works">
-          <WorkCard
-            v-for="work in works.slice(0,6)"
-            :key="work.title"
-            :work="work"
-            :data-id="work.id"
-          ></WorkCard>
+    <main>
+      <section class="margin-bottom-2x">
+        <div class="works-container">
+          <div class="works">
+            <WorkCard
+              v-for="work in works.slice(0,6)"
+              :key="work.title"
+              :work="work"
+              :data-id="work.id"
+            ></WorkCard>
+          </div>
         </div>
-      </div>
-      <ButtonIcon
-        content="Toutes mes créations"
-        icon="fa-arrow-right"
-        url="/works"
-        class="works-btn"
-      ></ButtonIcon>
-    </section>
-    <section class="about-section style-light margin-bottom-1x">
-      <UnderlinedTitle class="header-title" size="h1" content="Qui suis-je&nbsp?" />
-      <p>
-        Passionné par l'informatique et l'audiovisuel, j'aime tout ce qui à
-        trait au multimédia. Je suis actuellement en deuxième année de DUT
-        Métiers du Multimédia et de l'Internet à Laval et apprenti infographiste
-        aux Écoles militaires de Saint-Cyr Coëtquidan.
-      </p>
-      <div class="skills-wrapper">
-        <div class="left-skills">
-          <IconBox
-            icon="fas fa-camera"
-            title="Photographie"
-            content="Passionné par l'image, j'utilise la photo pour capturer l'instant lors de concerts ou de voyages."
-            alignment="right"
-          ></IconBox>
-          <IconBox
-            icon="fas fa-video"
-            title="Vidéo"
-            content="Vidéaste depuis deux ans pour Visufo où je m'occupe du Motion Design et des prises de vue en parallèle."
-            alignment="right"
-          ></IconBox>
+        <ButtonIcon
+          content="Toutes mes créations"
+          icon="fa-arrow-right"
+          url="/works"
+          class="works-btn"
+        ></ButtonIcon>
+      </section>
+      <section class="about-section style-light margin-bottom-1x">
+        <UnderlinedTitle class="header-title" size="h1" content="Qui suis-je&nbsp?" />
+        <p>
+          Passionné par l'informatique et l'audiovisuel, j'aime tout ce qui à
+          trait au multimédia. Je suis actuellement en deuxième année de DUT
+          Métiers du Multimédia et de l'Internet à Laval et apprenti infographiste
+          aux Écoles militaires de Saint-Cyr Coëtquidan.
+        </p>
+        <div class="skills-wrapper">
+          <div class="left-skills">
+            <IconBox
+              icon="fas fa-camera"
+              title="Photographie"
+              content="Passionné par l'image, j'utilise la photo pour capturer l'instant lors de concerts ou de voyages."
+              alignment="right"
+            ></IconBox>
+            <IconBox
+              icon="fas fa-video"
+              title="Vidéo"
+              content="Vidéaste depuis deux ans pour Visufo où je m'occupe du Motion Design et des prises de vue en parallèle."
+              alignment="right"
+            ></IconBox>
+          </div>
+          <img
+            class="skills-portrait box-shadow"
+            src="../assets/images/titouan.jpg"
+            alt="Portrait de Titouan Pellerin"
+          />
+          <div class="right-skills">
+            <IconBox
+              icon="fas fa-code"
+              title="Développement"
+              content="Je développe des sites internet en utilisant les différents langages/frameworks (HTML,CSS, Javascript, PHP, NodeJS, VueJS...)."
+              alignment="left"
+            ></IconBox>
+            <IconBox
+              icon="fab fa-wordpress"
+              title="WordPress"
+              content="Je créé des sites et développe des plugins/thèmes sur WordPress."
+              alignment="left"
+            ></IconBox>
+          </div>
         </div>
-        <img
-          class="skills-portrait box-shadow"
-          src="../assets/images/titouan.jpg"
-          alt="Portrait de Titouan Pellerin"
-        />
-        <div class="right-skills">
-          <IconBox
-            icon="fas fa-code"
-            title="Développement"
-            content="Je développe des sites internet en utilisant les différents langages/frameworks (HTML,CSS, Javascript, PHP, NodeJS, VueJS...)."
-            alignment="left"
-          ></IconBox>
-          <IconBox
-            icon="fab fa-wordpress"
-            title="WordPress"
-            content="Je créé des sites et développe des plugins/thèmes sur WordPress."
-            alignment="left"
-          ></IconBox>
-        </div>
-      </div>
-      <ButtonIcon
-        content="Mon CV"
-        icon="fa-external-link-alt"
-        url=""
-        class="skills-button"
-      ></ButtonIcon>
-    </section>
+        <ButtonIcon
+          content="Mon CV"
+          icon="fa-external-link-alt"
+          url=""
+          class="skills-button"
+        ></ButtonIcon>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -243,6 +245,7 @@ export default {
 
 .about-section {
   text-align: center;
+  padding: 0 5px;
 }
 
 .about-section p {

@@ -9,7 +9,22 @@
             "Développement",
             "Design"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "UnderlinedTitle",
+                "content": "Fonctionnement",
+                "size": "h2"
+            },
+            {
+                "type": "p",
+                "text": "Le but premier de ce projet est d'apprendre des nouvelles technologies. L'interface utilisateur est développée en VueJS et les données sont stockées dans une base de données MySQL. Pour communiquer entre l'interface utilisateur et la base de données, j'ai créé une API REST en NodeJS avec Express pour la gestion des routes et Sequelize comme ORM. Ce projet est encore en cours de développement et je réalise tout de A à Z (interface, base de données, API REST...)."
+            },
+            {
+                "type": "Embed",
+                "title": "Les maquettes",
+                "url": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F5NKrOw4D7k7UNoOZlsK7Bc%2FDesign%3Fnode-id%3D0%253A1"
+            }
+        ]
     },
     {
         "id": 2,
@@ -22,7 +37,13 @@
             "Audiovisuel",
             "MMI"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Embed",
+                "title": "La vidéo",
+                "url": "https://youtube.com/embed/ZJeE3hMHM0s"
+            }
+        ]
     },
     {
         "id": 3,
@@ -34,7 +55,15 @@
             "Design",
             "MMI"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Rendu final",
+                "size": 1,
+                "gallerySlug": "modelisation-3d-blender",
+                "customHeight": "50vh"
+            }
+        ]
     },
     {
         "id": 4,
@@ -131,7 +160,7 @@
             {
                 "type": "Gallery",
                 "title": "Captures d'écran",
-                "size": 3,
+                "size": 4,
                 "gallerySlug": "je-viens-dailleurs",
                 "imagesTitles": [
                     "Accueil",

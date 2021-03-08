@@ -37,14 +37,19 @@ export default {
   margin-right: auto;
   max-width: 1100px;
   height: 600px;
-
+  padding: 0 5px;
 }
 
 .embed-container iframe{
   width: 100%;
   border-radius: 10px;
 }
+@media (max-width: 576px) {
 
+  .embed-container{
+    height: 300px;
+  }
 
+}
 
 </style>

@@ -29,6 +29,7 @@
           class="slide-img"
           :source="`/works/${$route.params.slug}/${params.gallerySlug}-${n}.jpg`"
         />
+        <p v-if="params.imagesTitles" class="style-dark">{{params.imagesTitles[n-1]}}</p>
       </div>
     </div>
     <a class="prev" @click="plusSlides(-100)">&#10094;</a>
@@ -139,6 +140,7 @@ export default {
   min-width: 150px;
   margin: 8px;
   cursor: pointer;
+  display: flex;
 
 }
 
@@ -213,7 +215,6 @@ export default {
 .next {
   position: absolute;
   font-size: var(--font-size-30);
-  color: #fff;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   z-index: 1;
@@ -249,5 +250,16 @@ export default {
   height: 100%;
   max-width: 100%;
   object-fit: contain;
+}
+
+.slide p{
+  font-size: var(--font-size-15);
+}
+
+@media (max-width: 576px) {
+  
+  .gallery-item{
+    height: auto;
+  }
 }
 </style>
