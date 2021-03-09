@@ -10,10 +10,12 @@
           content="Titouan Pellerin"
         />
         <p class="header-caption">
-          Étudiant en deuxième année de DUT Métiers du Multimédia et de
-          l'Internet et à la recherche d'une alternance pour l'année
-          2021/2022.<br />
-          Membre de
+          Étudiant en deuxième année de
+          <strong>DUT Métiers du Multimédia et de l'Internet</strong>. Je suis à
+          la recherche d'une alternance pour l'année 2021/2022.
+        </p>
+        <p class="header-caption">
+          Co-fondateur de
           <a class="link bg-visufo" href="https://visufo.fr/" target="_blank"
             >Visufo</a
           >
@@ -73,21 +75,22 @@
         <p>
           Passionné par l'informatique et l'audiovisuel, j'aime tout ce qui
           touche au multimédia. Je suis actuellement en deuxième année de DUT
-          Métiers du Multimédia et de l'Internet à Laval et apprenti
-          infographiste aux Écoles militaires de Saint-Cyr Coëtquidan.
+          Métiers du Multimédia et de l'Internet à Laval. Cette année, je
+          suis apprenti infographiste aux Écoles militaires de Saint-Cyr
+          Coëtquidan.
         </p>
         <div class="skills-wrapper">
           <div class="left-skills">
             <IconBox
               icon="fas fa-camera"
               title="Photographie"
-              content="Passionné par l'image, j'utilise la photo pour capturer l'instant lors de concerts ou de voyages."
+              content="Passionné par l'image, j'utilise la photo pour capturer l'instant lors de concerts, de voyages..."
               alignment="right"
             ></IconBox>
             <IconBox
               icon="fas fa-video"
               title="Vidéo"
-              content="Vidéaste depuis deux ans pour Visufo où je m'occupe du Motion Design et des prises de vue en parallèle."
+              content="Vidéaste depuis deux ans pour Visufo. Je m'occupe du Motion Design et des prises de vue en parallèle."
               alignment="right"
             ></IconBox>
           </div>
@@ -162,14 +165,14 @@ export default {
           this.works = data;
           localStorage.works = JSON.stringify(data);
         });
-    }
+    },
   },
   mounted() {
     setTimeout(() => this.scrollFix(this.$route.hash), 1);
   },
-  beforeRouteEnter(to, from,next) {
-    next(vm => vm.fetchWork());
-  }
+  beforeRouteEnter(to, from, next) {
+    next((vm) => vm.fetchWork());
+  },
 };
 </script>
 
@@ -217,6 +220,10 @@ export default {
 .header-caption {
   font-size: var(--font-size-20);
   max-width: 1000px;
+}
+
+.header-caption:nth-of-type(2) {
+  margin-top: 0;
 }
 
 .header-socials {

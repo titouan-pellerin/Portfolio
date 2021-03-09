@@ -139,19 +139,13 @@ export default {
   height: 100%;
 }
 
-.header-title {
-  font-size: var(--font-size-40);
-  text-align: center;
-  margin: 0;
-}
-
 .header-caption,
 .work-info {
   font-size: var(--font-size-20);
 }
 
 .header-caption{
-  max-width: 1500px;
+  max-width: 1000px;
 }
 
 .work-info {

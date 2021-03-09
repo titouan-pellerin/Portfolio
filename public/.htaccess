@@ -1,3 +1,5 @@
+Redirect permanent / https://titouanpellerin.fr/
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
