@@ -71,8 +71,8 @@
           content="Qui suis-je&nbsp?"
         />
         <p>
-          Passionné par l'informatique et l'audiovisuel, j'aime tout ce qui à
-          trait au multimédia. Je suis actuellement en deuxième année de DUT
+          Passionné par l'informatique et l'audiovisuel, j'aime tout ce qui
+          touche au multimédia. Je suis actuellement en deuxième année de DUT
           Métiers du Multimédia et de l'Internet à Laval et apprenti
           infographiste aux Écoles militaires de Saint-Cyr Coëtquidan.
         </p>
@@ -116,6 +116,7 @@
           icon="fa-external-link-alt"
           url="/CV.pdf"
           class="skills-button"
+          :external="true"
         ></ButtonIcon>
       </section>
     </main>

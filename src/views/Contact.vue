@@ -100,7 +100,7 @@ export default {
         };
         answer.textContent = '';
         form.classList.add('loading');
-        fetch("http://mail.titouanpellerin.info/", fetchData).then(response => {
+        fetch("https://mail.titouanpellerin.info/", fetchData).then(response => {
           form.classList.remove('loading');
           if(response.ok){
             answer.textContent = "Merci pour votre message, il vient d'être envoyé.";

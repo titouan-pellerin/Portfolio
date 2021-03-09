@@ -150,6 +150,10 @@ export default {
   font-size: var(--font-size-20);
 }
 
+.header-caption{
+  max-width: 1500px;
+}
+
 .work-info {
   display: flex;
   flex-wrap: wrap;
@@ -171,7 +175,7 @@ header .title-wrapper {
 }
 
 main .title-wrapper {
-  font-size: var(--font-size-30);
+  font-size: var(--font-size-40);
 }
 
 .work main p {

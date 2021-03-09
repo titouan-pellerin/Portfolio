@@ -93,6 +93,13 @@ export default {
     },
   },
   mounted() {
+    var t="Design & Code by www.titouanpellerin.info";
+    if(this.isEdge||this.isExplorer)
+      console.log(t);
+    else{
+      var e=["height: 40px","margin: 20px 0",'font-family: "Helvetica Neue", Helvetica, Arial',"font-weight: 700"].join(";");
+      console.log("%c ".concat(t),e);
+    }
     window.addEventListener("scroll", this.scrollFunction);
     this.mobileNav();
   }
@@ -244,11 +251,11 @@ a {
 }
 
 .nav a.router-link-exact-active:not(.about-menu) {
-  color: #439efe;
+  color: var(--accent-color);
 }
 
 .nav a:not(.btn):hover {
-  color: #439efe;
+  color: var(--accent-color);
 }
 
 .menu-logo img {

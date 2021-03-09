@@ -1,5 +1,37 @@
 [
     {
+        "id": 34,
+        "title": "Portfolio Vue.js",
+        "slug": "portfolio-vuejs",
+        "caption": "Site Internet réalisé en deux semaines avec le framework JavaScript Vue.Js",
+        "date": "2021-03-09",
+        "categories": [
+            "Développement",
+            "Design"
+        ],
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Captures d'écran",
+                "size": 3,
+                "gallerySlug": "portfolio-vuejs",
+                "imagesTitles": [
+                    "Accueil",
+                    "Créations",
+                    "Contenu d'une création"
+                ],
+                "customHeight":"50vh"
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Dépôt Github",
+                "icon": "fa-external-link-alt",
+                "url": "https://github.com/titouan-pellerin/Portfolio",
+                "external": true
+            }
+        ]
+    },
+    {
         "id": 1,
         "title": "Amocas Dashboard",
         "slug": "amocas-dashboard",
@@ -23,6 +55,20 @@
                 "type": "Embed",
                 "title": "Les maquettes",
                 "url": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F5NKrOw4D7k7UNoOZlsK7Bc%2FDesign%3Fnode-id%3D0%253A1"
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Dépôt Github (Back)",
+                "icon": "fa-external-link-alt",
+                "url": "https://github.com/titouan-pellerin/Amocas-Dashboard",
+                "external": true
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Dépôt Github (Front)",
+                "icon": "fa-external-link-alt",
+                "url": "https://github.com/titouan-pellerin/Amocas-Dashboard-Front",
+                "external": true
             }
         ]
     },
@@ -227,7 +273,26 @@
         "categories": [
             "Visufo"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "Mes articles",
+                "size": 3,
+                "gallerySlug": "blog-visufo",
+                "imagesTitles": [
+                    "Les coulisses de Visufo : Le CAP+",
+                    "La photographie de concert",
+                    "Flutter, un framework prometteur"
+                ]
+            },
+            {
+                "custom": "ButtonIcon",
+                "content": "Visiter le blog",
+                "icon": "fa-external-link-alt",
+                "url": "https://visufo.fr/blog/",
+                "external": true
+            }
+        ]
     },
     {
         "id": 11,
