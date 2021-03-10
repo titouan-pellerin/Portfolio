@@ -115,12 +115,32 @@
         "id": 4,
         "title": "Affiches Pour La Cérémonie Du Triomphe",
         "slug": "affiches-triomphe",
-        "caption": "Réalisation de quatre propositions d'affiches pour la cérémonie du Triomphe dans le cadre de mon alternance aux Écoles de Saint-Cyr Coëtquidan",
+        "caption": "Réalisation de quatre propositions d'affiches pour la cérémonie du Triomphe dans le cadre de mon alternance aux Écoles de Saint-Cyr Coëtquidan. Les trois portraits de l'affiche finale ont été réalisés par mes soins.",
         "date": "2021-01-15",
         "categories": [
             "Design"
         ],
-        "content": "Test content"
+        "content": [
+            {
+                "type": "Gallery",
+                "title": "4 Propositions",
+                "size": 4,
+                "gallerySlug": "affiches-triomphe",
+                "imagesTitles": [
+                    "V1",
+                    "V2",
+                    "V3",
+                    "V4"
+                ]
+            },
+            {
+                "type": "Gallery",
+                "title": "Affiche finale",
+                "size": 1,
+                "gallerySlug": "affiche-triomphe",
+                "customHeight": "50vh"
+            }
+        ]
     },
     {
         "id": 5,
