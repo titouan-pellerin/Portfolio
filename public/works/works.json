@@ -3,7 +3,7 @@
         "id": 34,
         "title": "Portfolio Vue.js",
         "slug": "portfolio-vuejs",
-        "caption": "Site Internet réalisé en deux semaines avec le framework JavaScript Vue.Js",
+        "caption": "Site Internet réalisé en deux semaines avec le framework JavaScript Vue.js. Le contenu des projets est géré de façon dynamique à l'aide d'un fichier JSON qui simule le comportement d'une API communiquant avec une base de données.",
         "date": "2021-03-09",
         "categories": [
             "Développement",
